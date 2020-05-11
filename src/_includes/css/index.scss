@@ -14,5 +14,7 @@
 body {
   background-color: $background-color;
 }
+
 @import "defaults.scss";
 @import "components.scss";
+@import "swup.scss";

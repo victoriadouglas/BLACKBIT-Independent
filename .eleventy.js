@@ -40,6 +40,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy({ "src/_includes/img": "img" });
   eleventyConfig.addPassthroughCopy({ "src/_includes/css": "css" });
+  eleventyConfig.addPassthroughCopy({ "src/_includes/js": "js" });
 
   /* Markdown Overrides */
   let markdownLibrary = markdownIt({
