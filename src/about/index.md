@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-title: About
+title: about
 templateClass: tmpl-post
 eleventyNavigation:
   key: About

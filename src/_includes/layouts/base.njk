@@ -25,7 +25,7 @@
     </header> -->
 
     <main class="transition-page">
-      <div class="warning transition-left">
+      <div class="warning">
         <ol>
           <li>Edit the <code>_data/metadata.json</code> with your blog’s information.</li>
           <li>(Optional) Edit <code>.eleventy.js</code> with your <a href="https://www.11ty.dev/docs/config/">configuration preferences</a>.</li>
@@ -36,11 +36,15 @@
 
       {{ content | safe }}
     </main>
-    </div>
 
-    <footer></footer>
+   {% include "components/background.njk" %}
+    <footer>
+    </footer>
+      </div>
     <script defer src="/js/swup.min.js"></script>
     <script defer src="/js/transitions.js"></script>
+    <script defer src="/js/SwupBodyClassPlugin.min.js"></script>
+
 
     <!-- Current page: {{ page.url | url }} -->
 
