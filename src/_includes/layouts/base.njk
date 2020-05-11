@@ -13,17 +13,6 @@
   <body>
     <div id="swup">
     {% include "components/navbar.njk" %}
-    <!-- <header>
-      <h1 class="home"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
-
-      {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-      <ul class="nav">
-      {%- for entry in collections.all | eleventyNavigation %}
-        <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
-      {%- endfor %}
-      </ul>
-    </header> -->
-
     <main class="transition-page">
       <div class="warning">
         <ol>
@@ -37,14 +26,23 @@
       {{ content | safe }}
     </main>
 
-   {% include "components/background.njk" %}
+    <style>
+    {% if backgroundimage or backgroundcolor %}
+    {% if backgroundimage %}
+    body {background-image: url("{{ backgroundimage }}");}
+    {% else %}
+    body {background-color:{{ backgroundcolor }};
+    {% endif %}
+    {% else %}
+    body {background-color: #fafafa;
+    {% endif %}
+</style>
     <footer>
     </footer>
       </div>
     <script defer src="/js/swup.min.js"></script>
     <script defer src="/js/transitions.js"></script>
     <script defer src="/js/SwupBodyClassPlugin.min.js"></script>
-
 
     <!-- Current page: {{ page.url | url }} -->
 

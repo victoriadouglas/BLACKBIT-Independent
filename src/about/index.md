@@ -1,7 +1,8 @@
 ---
 layout: layouts/post.njk
 title: about
-templateClass: tmpl-post
+backgroundimage: _includes/img/background/cinnamon.png
+backgroundcolor:
 eleventyNavigation:
   key: About
   order: 3

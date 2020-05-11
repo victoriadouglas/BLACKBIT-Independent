@@ -1,15 +1,11 @@
-<div class="background"></div>
-
-{% if title =="blackbit" %}
 <style>
-    .background {background-color:red;}
-</style>
-{% elif title =="about" %}
-<style>
-    .background {background-color:blue;}
-</style>
+{% if background %}
+{% if background-image =="true" %}
+    body {background-image: url("{{ background }}");}
 {% else %}
-<style>
-    .background {background-color:#fafafa;}
-</style>
+    body {background-color:{{ background }};
 {% endif %}
+{% else %}
+    body {background-color:#fafafa;}
+{% endif %}
+</style>

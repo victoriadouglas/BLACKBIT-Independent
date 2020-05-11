@@ -46,12 +46,16 @@
   font-weight: 600;
   text-transform: lowercase;
 }
-.nav-item a[href]:not(:hover) {
+
+.nav-item :hover {
   text-decoration: none;
+  border-bottom: 1px solid black;
+  transition: 0.2s;
 }
 .nav-item-active {
   font-weight: 700;
   text-transform: uppercase;
+  text-decoration: none;
 }
 
 /*Custom Scrollbar*/
