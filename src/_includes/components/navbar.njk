@@ -1,0 +1,28 @@
+<header>
+      <div class="navbar">
+        <div class="logodiv">
+          {% if logo =="blackbit" %}
+            <h1 class="home"><a href="{{ '/' | url }}">blackbit</a></h1>
+          {% elif logo =="emoji" %}
+            <h1 class="home"><a href="{{ '/' | url }}">🤬🤬🤬</a></h1>
+          {% elif logo =="emojiskull" %}
+            <h1 class="home"><a href="{{ '/' | url }}">💀💀💀</a></h1>
+            {% elif logo =="emojicats" %}
+            <h1 class="home"><a href="{{ '/' | url }}">😾😾😾</a></h1>
+          {% elif logo =="skull" %}
+            <a href="{{ '/' | url }}"><img class="navlogo" src="/img/logoskull.svg" alt="skull logo" height="50px;"/></a>
+          {% elif logo =="cinnamon" %}
+            <a href="{{ '/' | url }}"><img class="navlogo" src="/img/cinnamonnav.svg" alt="cinnamon logo" height="60px;"/></a>
+          {% else %}
+           <h1 class="home"><a href="{{ '/' | url }}">blackbit</a></h1>
+          {% endif %}
+        </div>
+
+      {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
+      <ul class="nav">
+      {%- for entry in collections.all | eleventyNavigation %}
+        <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">/ {{ entry.title }}</a></li>
+      {%- endfor %}
+      </ul>
+      </div>
+    </header>

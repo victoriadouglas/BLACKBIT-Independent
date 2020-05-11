@@ -1,9 +1,9 @@
 ---
-layout: layouts/post.njk
+layout: layouts/comicarchive.njk
 title: Cinnamon
 templateClass: tmpl-post
 eleventyNavigation:
-  key: About Me
+  key: Cinnamon
   order: 3
 ---
 

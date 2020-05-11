@@ -3,7 +3,7 @@ layout: layouts/post.njk
 title: Animation
 templateClass: tmpl-post
 eleventyNavigation:
-  key: About Me
+  key: Animation
   order: 3
 ---
 
