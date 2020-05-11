@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
     <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
-    <script defer src="/js/swup.min.js"></script>
-    <script defer src="/js/transitions.js"></script>
+
   </head>
   <body>
+    <div id="swup">
     {% include "components/navbar.njk" %}
     <!-- <header>
       <h1 class="home"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
@@ -24,8 +24,8 @@
       </ul>
     </header> -->
 
-    <main id="swup" class="transition-fade">
-      <div class="warning">
+    <main class="transition-page">
+      <div class="warning transition-left">
         <ol>
           <li>Edit the <code>_data/metadata.json</code> with your blog’s information.</li>
           <li>(Optional) Edit <code>.eleventy.js</code> with your <a href="https://www.11ty.dev/docs/config/">configuration preferences</a>.</li>
@@ -36,9 +36,13 @@
 
       {{ content | safe }}
     </main>
+    </div>
 
     <footer></footer>
+    <script defer src="/js/swup.min.js"></script>
+    <script defer src="/js/transitions.js"></script>
 
     <!-- Current page: {{ page.url | url }} -->
+
   </body>
 </html>
