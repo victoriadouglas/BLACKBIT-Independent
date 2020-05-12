@@ -11,17 +11,15 @@
 
   </head>
   <body>
-    <div id="swup">
     {% include "components/navbar.njk" %}
-    <main class="transition-page">
-      {{ content | safe }}
-    </main>
+    {{ content | safe }}
 
+
+  
     <p class="signature">
     // victoria douglas 2020 ++
     </p>
     {% include "components/accent.njk" %}
-        </div>
     <style>
     {% if backgroundimage %}
     body {background-image: url("{{ backgroundimage }}");}
@@ -35,11 +33,22 @@
     <footer>
     </footer>
     
-      <script defer src="/js/swup.min.js"></script>
-      <script defer src="/js/transitions.js"></script>
-      <script defer src="/js/SwupBodyClassPlugin.min.js"></script>
-      <script src="/js/transitions.js"></script>
-
+      <script src="/js/three.r95.min.js"></script>
+      <script src="/js/vanta.net.min.js"></script>
+      
+<script>
+VANTA.NET({
+  el: "#vanta-background",
+  mouseControls: true,
+  touchControls: true,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  color: 0x979797,
+  backgroundColor: 0xeaeaea
+})
+</script>
     <!-- Current page: {{ page.url | url }} -->
 
   </body>
