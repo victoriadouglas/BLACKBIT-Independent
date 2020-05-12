@@ -1,7 +1,8 @@
 ---
-layout: layouts/post.njk
+layout: layouts/page.njk
 title: Sketches
-templateClass: tmpl-post
+logo: emojipencils
+backgroundcolor: e8ff00
 eleventyNavigation:
   key: Sketches
   order: 2

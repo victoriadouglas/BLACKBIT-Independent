@@ -1,7 +1,8 @@
 ---
-layout: layouts/post.njk
+layout: layouts/page.njk
 title: Animation
-templateClass: tmpl-post
+logo: emojianim
+backgroundcolor: f0f0f0
 eleventyNavigation:
   key: Animation
   order: 3

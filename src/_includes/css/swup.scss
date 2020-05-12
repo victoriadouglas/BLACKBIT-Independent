@@ -1,6 +1,6 @@
 .transition-page {
   opacity: 1;
-  transition: 700ms;
+  transition: 200ms;
 }
 
 html.is-animating .transition-page {
@@ -9,7 +9,7 @@ html.is-animating .transition-page {
 
 .transition-fade {
   opacity: 1;
-  transition: 700ms;
+  transition: 200ms;
 }
 
 html.is-animating .transition-fade {

@@ -1,8 +1,8 @@
 ---
-layout: layouts/post.njk
+layout: layouts/page.njk
 title: about
-backgroundimage: _includes/img/background/cinnamon.png
-backgroundcolor:
+logo: emoji
+backgroundcolor: ff0093
 eleventyNavigation:
   key: About
   order: 3

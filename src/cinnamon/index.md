@@ -1,8 +1,8 @@
 ---
 layout: layouts/comicarchive.njk
 title: Cinnamon
-background-color: blackbit
-templateClass: tmpl-post
+logo: emojicats
+backgroundimage: ../img/background/cinnamon.png
 eleventyNavigation:
   key: Cinnamon
   order: 3
