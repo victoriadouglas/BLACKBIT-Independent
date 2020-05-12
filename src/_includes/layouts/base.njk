@@ -17,9 +17,11 @@
       {{ content | safe }}
     </main>
 
-    <p class="signature">// victoria douglas 2020 ++</p>
+    <p class="signature">
+    // victoria douglas 2020 ++
+    </p>
     {% include "components/accent.njk" %}
-
+        </div>
     <style>
     {% if backgroundimage %}
     body {background-image: url("{{ backgroundimage }}");}
@@ -29,12 +31,14 @@
     body {background-color: #f0f0f0;
     {% endif %}
     </style>
+
     <footer>
     </footer>
-      </div>
-    <script defer src="/js/swup.min.js"></script>
-    <script defer src="/js/transitions.js"></script>
-    <script defer src="/js/SwupBodyClassPlugin.min.js"></script>
+    
+      <script defer src="/js/swup.min.js"></script>
+      <script defer src="/js/transitions.js"></script>
+      <script defer src="/js/SwupBodyClassPlugin.min.js"></script>
+      <script src="/js/transitions.js"></script>
 
     <!-- Current page: {{ page.url | url }} -->
 
