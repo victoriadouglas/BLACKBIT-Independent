@@ -39,6 +39,9 @@ main {
   width: 960px;
   max-width: 95vw;
   margin: 0 auto;
+  img {
+    max-width: 100%;
+  }
 }
 
 $halftone: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAHElEQVQYV2NUVFT8f//+fUYGBgYGMAEDcA5IBQCKJQVmn76DhAAAAABJRU5ErkJggg==");
