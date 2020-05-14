@@ -2,20 +2,40 @@
 layout: layouts/base.njk
 ---
 <main>
+
+{% include "components/header.njk" %}
+
+
+
+
 {% set previousPost = collections.cinnamon | getPreviousCollectionItem(page) %}
 {% set nextPost = collections.cinnamon | getNextCollectionItem(page) %}
+
+{% for entry in collections.cinnamon | reverse | head(-1) %}
+{% if page.url == entry.url %}
+{% else %}
+<a href="{{ entry.url }}">First</a>
+{% endif %}
+{% endfor %}
+
 {% if previousPost %}<a href="{{ previousPost.url }}">Previous</a>{% endif %}
-{% if nextPost %}<a href="{{ nextPost.url }}">Next</a>{% endif %}
+
 <select id="page select" onchange="location = this.value;">
   <option value="">PAGE SELECT</option>
   {% for entry in collections.cinnamon %}
   <option value="{{ entry.url }}">{{ entry.data.title }} {{ entry.data.chapter }}.{{ entry.data.pagenumber }}</option>
   {% endfor %}
-  <option value="mercedes">Mercedes</option>
-  <option value="audi">Audi</option>
 </select>
 
-{% include "components/header.njk" %}
+{% if nextPost %}<a href="{{ nextPost.url }}">Next</a>{% endif %}
+
+{% for entry in collections.cinnamon | head(-1) %}
+{% if page.url == entry.url %}
+{% else %}
+<a href="{{ entry.url }}">Latest</a>
+{% endif %}
+{% endfor %}
+
 <div class="testcomicnav"></div>
 <img class="comicpage" src="/img/{{ title }}/{{ chapter }}-{{ pagenumber }}.jpg"/>
 <h1>{{ title }}</h1>
