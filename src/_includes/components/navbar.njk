@@ -1,5 +1,5 @@
 <header>
-      <div class="navbar">
+      <div class="navbar" id="mynavbar">
         <div class="logodiv">
           {% if logo =="blackbit" %}
             <h1 class="home"><a href="{{ '/' | url }}">blackbit</a></h1>
@@ -25,10 +25,10 @@
         </div>
 
       {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-      <div class="navstuff">
-      {%- for entry in collections.all | eleventyNavigation %}
-<a class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}" href="{{ entry.url | url }}">{{ entry.title }}</a>
-      {%- endfor %}
-      </ul>
+      <div class="navstuff" id="navcollapse">
+      {%- for entry in collections.all | eleventyNavigation %}<a class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}" href="{{ entry.url | url }}">{{ entry.title }}</a>{%- endfor %}
       </div>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
     </header>

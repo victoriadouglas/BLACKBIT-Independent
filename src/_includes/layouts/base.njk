@@ -6,9 +6,10 @@
     <title>{{ renderData.title or title or metadata.title }}</title>
     <meta name="Description" content="{{ renderData.description or description or metadata.description }}">
     <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
+    <link rel="stylesheet" href="{{ '/css/all.min.css' | url }}">
     <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
-
+    
   </head>
   <body>
     {% include "components/navbar.njk" %}
@@ -30,7 +31,20 @@
     {% endif %}
     </style>
 
+
+
     <footer>
+
+    <script>
+function myFunction() {
+  var x = document.getElementById("navcollapse");
+  if (x.className === "navstuff") {
+    x.className += " responsive";
+  } else {
+    x.className = "navstuff";
+  }
+}
+</script>
     </footer>
     <!-- Current page: {{ page.url | url }} -->
 
