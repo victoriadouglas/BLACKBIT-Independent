@@ -2,7 +2,7 @@
 layout: layouts/page.njk
 title: Animation
 description: Help, I've been framed!
-logo: emojianim
+navlogo: emojianim
 backgroundcolor: f0f0f0
 eleventyNavigation:
   key: Animation

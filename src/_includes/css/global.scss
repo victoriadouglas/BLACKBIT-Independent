@@ -7,19 +7,6 @@
 
 /*Typography Treatments*/
 
-.fa,
-.fas {
-  font-weight: 900;
-  font-size: 2rem;
-  transition: 0.2sec;
-}
-
-.fa:hover,
-.fas:hover {
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-}
-
 body {
   background-position: center top;
   background-repeat: repeat;
@@ -64,6 +51,16 @@ main {
   img {
     max-width: 100%;
   }
+}
+
+a {
+  color: white;
+  background-color: black;
+  text-transform: uppercase;
+}
+
+a:hover {
+  background-color: #505050;
 }
 
 $halftone: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAHElEQVQYV2NUVFT8f//+fUYGBgYGMAEDcA5IBQCKJQVmn76DhAAAAABJRU5ErkJggg==");

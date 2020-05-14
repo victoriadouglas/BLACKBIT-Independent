@@ -33,17 +33,25 @@
   background-color: black;
   transition: 0.1s;
 }
-.nav {
-  padding: 0;
-  list-style: none;
-  float: left;
-  margin-left: 1em;
+.navbar .logodiv {
+  a {
+    color: black;
+    background: none;
+  }
 }
+
+.navbar .logodiv {
+  a:hover {
+    background-color: black;
+  }
+}
+
 .nav-item {
   text-decoration: none;
   display: inline-block;
   padding: 1rem 0.5rem 0.2rem;
   color: black;
+  background: none;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 300;
   font-style: italic;
@@ -56,8 +64,6 @@
   transition: 0.2s;
 }
 .nav-item-active {
-  font-weight: 700;
-  text-transform: uppercase;
   text-decoration: none;
   color: white;
   background-color: black;
@@ -84,7 +90,7 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .navstuff {
     display: none;
   }
@@ -93,7 +99,7 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .navstuff.responsive {
     padding-bottom: 20px;
     background-color: white;
@@ -159,3 +165,5 @@
   margin: 0 auto;
   display: block;
 }
+
+/*Font Awesome*/

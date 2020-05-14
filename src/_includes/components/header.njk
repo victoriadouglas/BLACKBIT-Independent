@@ -1,4 +1,9 @@
+
+    {% if logoimage %}
+    <img class="logotitle" src="{{ titleimage }}"/>
+    {% else %}
 <h1 class="heading heading--stroke heading--halftone">{{ title }}</h1>
+    {% endif %}
 {% if description %}
 <div class="flavortext">
 <p>{{ description }}</p>

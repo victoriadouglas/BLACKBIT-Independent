@@ -1,8 +1,8 @@
 ---
 layout: layouts/comicarchive.njk
 title: Cinnamon
-logo: emojicats
-logoimage: ../img/logo/cinnamonlogo.png
+navlogo: emojicats
+titleimage: ../img/logo/cinnamonlogo.png
 backgroundimage: ../img/background/cinnamonbackground.jpg
 eleventyNavigation:
   key: Cinnamon
