@@ -2,6 +2,19 @@
 layout: layouts/base.njk
 ---
 <main>
+{% set previousPost = collections.cinnamon | getPreviousCollectionItem(page) %}
+{% set nextPost = collections.cinnamon | getNextCollectionItem(page) %}
+{% if previousPost %}<a href="{{ previousPost.url }}">Previous</a>{% endif %}
+{% if nextPost %}<a href="{{ nextPost.url }}">Next</a>{% endif %}
+<select id="page select" onchange="location = this.value;">
+  <option value="">PAGE SELECT</option>
+  {% for entry in collections.cinnamon %}
+  <option value="{{ entry.url }}">{{ entry.data.title }} {{ entry.data.chapter }}.{{ entry.data.pagenumber }}</option>
+  {% endfor %}
+  <option value="mercedes">Mercedes</option>
+  <option value="audi">Audi</option>
+</select>
+
 {% include "components/header.njk" %}
 <div class="testcomicnav"></div>
 <img class="comicpage" src="/img/{{ title }}/{{ chapter }}-{{ pagenumber }}.jpg"/>
