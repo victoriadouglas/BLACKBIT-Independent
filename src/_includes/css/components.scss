@@ -43,6 +43,7 @@
 .navbar .logodiv {
   a:hover {
     background-color: black;
+    color: white;
   }
 }
 
@@ -77,6 +78,7 @@
 .navbar .icon {
   display: none;
   color: black;
+  background: none;
   padding: 0.5rem 0.7rem;
 }
 
@@ -160,10 +162,15 @@
 
 /* Logo Titles*/
 .logotitle {
-  max-width: 90vw;
+  max-width: 100%;
   width: 1200px;
   margin: 0 auto;
   display: block;
 }
 
 /*Font Awesome*/
+
+.fa,
+.fas {
+  font-size: 2rem;
+}

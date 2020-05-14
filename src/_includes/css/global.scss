@@ -17,11 +17,13 @@ body {
 
 .signature {
   position: fixed;
+  padding: 5px;
   transform-origin: left;
   transform: rotate(-90deg);
   bottom: 4vh;
   left: 2vw;
   margin: 0;
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 .svgaccent {
@@ -94,4 +96,8 @@ $halftone: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKL
   margin-bottom: 0;
   letter-spacing: -0.5vw;
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAF0lEQVQYlWNgYGD4D8U4AUEF1Af0dhMAOBcH+bmFHC0AAAAASUVORK5CYII=);
+}
+
+.comicpage {
+  width: 100%;
 }

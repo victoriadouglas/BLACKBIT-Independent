@@ -1,8 +1,10 @@
 ---
 layout: layouts/base.njk
 ---
+<main>
+{% include "components/header.njk" %}
+<div class="testcomicnav"></div>
+<img class="comicpage" src="/img/{{ title }}/{{ chapter }}-{{ pagenumber }}.jpg"/>
 <h1>{{ title }}</h1>
-
 {{ content | safe }}
-
-<p><a href="{{ '/' | url }}">← Home</a></p>
+</main>

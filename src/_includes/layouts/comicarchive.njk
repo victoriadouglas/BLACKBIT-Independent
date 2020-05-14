@@ -1,11 +1,7 @@
 ---
 layout: layouts/base.njk
 ---
-    {% if titleimage %}
-    <img class="logotitle" src="{{ titleimage }}"/>
-    {% else %}
 {% include "components/header.njk" %}  
-    {% endif %}
 <main>
 {{ content | safe }}
 </main>

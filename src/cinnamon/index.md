@@ -2,8 +2,8 @@
 layout: layouts/comicarchive.njk
 title: Cinnamon
 navlogo: emojicats
-titleimage: ../img/logo/cinnamonlogo.png
-backgroundimage: ../img/background/cinnamonbackground.jpg
+titleimage: /img/logo/cinnamonlogo.png
+backgroundimage: /img/background/cinnamonbackground.jpg
 eleventyNavigation:
   key: Cinnamon
   order: 3

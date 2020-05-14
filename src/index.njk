@@ -15,3 +15,7 @@ eleventyNavigation:
 
 <p>More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>
 <img src="img/cinnamon-riffs.jpg" alt="Flowers in Chania">
+
+{% for entry in collections.cinnamon %}
+<p>{{ entry.title }}</p>
+{% endfor %}
