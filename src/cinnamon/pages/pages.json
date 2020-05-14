@@ -1,9 +1,6 @@
 {
   "title": "cinnamon",
-  "layout": "layouts/comicpage.njk",
-  "navlogo": "emojicats",
-  "backgroundimage": "/img/background/cinnamonbackground.jpg",
-  "titleimage": "/img/logo/cinnamonlogo.png",
+  "layout": "layouts/cinnamonpage.njk",
   "tags": ["cinnamon"],
   "permalink": "{{ title | slug }}/episode{{ chapter }}/page{{ pagenumber }}/"
 }

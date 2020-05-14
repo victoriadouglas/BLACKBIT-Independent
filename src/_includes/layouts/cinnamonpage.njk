@@ -1,5 +1,9 @@
 ---
 layout: layouts/base.njk
+titleimage: /img/logo/cinnamonlogo.png
+backgroundimage: /img/background/cinnamonbackground.jpg
+navlogo: emojicats
+title: cinnamon
 ---
 <main>
 
@@ -38,6 +42,12 @@ layout: layouts/base.njk
 
 <div class="testcomicnav"></div>
 <img class="comicpage" src="/img/{{ title }}/{{ chapter }}-{{ pagenumber }}.jpg"/>
-<h1>{{ title }}</h1>
+<div class="mangapage" style="grid-template-columns: 1fr 5fr;" >
+<div class="mangahalftone"></div>
+<div class="mangacontent mangapaper">
+<h1>{{ title }} {{chapter}}.{{ pagenumber }}</h1>
+<p class="datedisplay"> <small>{{ date }}</small> </p>
 {{ content | safe }}
+</div>
+</div>
 </main>
