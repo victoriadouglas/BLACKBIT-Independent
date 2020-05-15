@@ -32,6 +32,11 @@ table th {
   padding-right: 1em;
 }
 
+.container {
+  max-width: 95vw;
+  margin: 0 auto;
+}
+
 pre,
 code {
   font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono",

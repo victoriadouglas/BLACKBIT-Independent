@@ -180,7 +180,6 @@
 .mangapage {
   margin-top: 10px;
   margin-bottom: 200px;
-  width: 100%;
   display: grid;
   grid-gap: 10px;
   img {
@@ -259,7 +258,7 @@
   margin: 10px auto;
   position: relative;
   width: 960px;
-  max-width: 98vw;
+  max-width: 90vw;
   display: grid;
   grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
   justify-items: center;

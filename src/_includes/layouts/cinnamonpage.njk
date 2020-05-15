@@ -11,9 +11,11 @@ navlogo: emojicats
 
 
 
-
+<div class="container">
 <img class="cinnatitle" style="margin-top:20px;" src="/img/logo/cinnamoncomictitle.png"/>
+</div>
 <img class="comicpage" src="/img/{{ title }}/{{ chapter }}-{{ pagenumber }}.jpg"/>
+<div class="container">
 {% include "components/cinnamonnav.njk" %}
 <div class="mangapage" style="grid-template-columns: 1fr 5fr;" >
 <div class="mangahalftone"></div>
@@ -21,6 +23,7 @@ navlogo: emojicats
 <h1>{{ title }} {{chapter}}.{{ pagenumber }}</h1>
 <p class="datedisplay"> <small>{{ date }}</small> </p>
 {{ content | safe }}
+</div>
 </div>
 </div>
 </main>
