@@ -6,41 +6,14 @@ navlogo: emojicats
 ---
 <main>
 
-{% include "components/header.njk" %}
 
 
 
 
-{% set previousPost = collections.cinnamon | getPreviousCollectionItem(page) %}
-{% set nextPost = collections.cinnamon | getNextCollectionItem(page) %}
-
-{% for entry in collections.cinnamon | reverse | head(-1) %}
-{% if page.url == entry.url %}
-{% else %}
-<a href="{{ entry.url }}">First</a>
-{% endif %}
-{% endfor %}
-
-{% if previousPost %}<a href="{{ previousPost.url }}">Previous</a>{% endif %}
-
-<select id="page select" onchange="location = this.value;">
-  <option value="">PAGE SELECT</option>
-  {% for entry in collections.cinnamon %}
-  <option value="{{ entry.url }}">{{ entry.data.title }} {{ entry.data.chapter }}.{{ entry.data.pagenumber }}</option>
-  {% endfor %}
-</select>
-
-{% if nextPost %}<a href="{{ nextPost.url }}">Next</a>{% endif %}
-
-{% for entry in collections.cinnamon | head(-1) %}
-{% if page.url == entry.url %}
-{% else %}
-<a href="{{ entry.url }}">Latest</a>
-{% endif %}
-{% endfor %}
-
+{% include "components/cinnamonnav.njk" %}
 <div class="testcomicnav"></div>
 <img class="comicpage" src="/img/{{ title }}/{{ chapter }}-{{ pagenumber }}.jpg"/>
+{% include "components/cinnamonnav.njk" %}
 <div class="mangapage" style="grid-template-columns: 1fr 5fr;" >
 <div class="mangahalftone"></div>
 <div class="mangacontent mangapaper">

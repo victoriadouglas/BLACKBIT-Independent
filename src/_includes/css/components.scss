@@ -250,3 +250,37 @@
     display: block;
   }
 }
+
+/*Comics Nav*/
+
+.comicnav {
+  margin: 10px auto;
+  position: relative;
+  width: 960px;
+  max-width: 98vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  a {
+    background: none;
+  }
+  img {
+    max-height: 100px;
+  }
+  div {
+    align-items: center;
+  }
+}
+
+.minicomicnav {
+  display: grid;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  select {
+    width: 500px;
+    max-width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
