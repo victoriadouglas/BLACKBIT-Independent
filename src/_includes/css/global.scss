@@ -24,10 +24,12 @@ body {
   left: 2vw;
   margin: 0;
   background-color: rgba(255, 255, 255, 0.4);
+  z-index: -5;
 }
 
 .svgaccent {
   display: none;
+  z-index: -5;
 }
 
 @media only screen and (min-width: 1050px) {
@@ -49,6 +51,23 @@ body {
 main {
   width: 960px;
   max-width: 95vw;
+  margin: 0 auto;
+  img {
+    max-width: 100%;
+  }
+}
+
+.container {
+  width: 960px;
+  max-width: 95vw;
+  margin: 0 auto;
+  img {
+    max-width: 100%;
+  }
+}
+.bigcontainer {
+  width: 95;
+  max-width: 98vw;
   margin: 0 auto;
   img {
     max-width: 100%;

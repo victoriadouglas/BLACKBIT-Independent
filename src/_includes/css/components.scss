@@ -212,3 +212,41 @@
 .mangahalftone {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAF0lEQVQYlWNgYGD4D8U4AUEF1Af0dhMAOBcH+bmFHC0AAAAASUVORK5CYII=);
 }
+
+/*Masonry Grid*/
+
+.grid {
+  display: flex;
+  width: 90vw;
+  margin: 0 auto;
+  .grid-col {
+    flex: 1;
+  }
+  img {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+.grid-col--2,
+.grid-col--3 {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .grid-col--2 {
+    display: block;
+  }
+  .grid-col--3 {
+    display: none;
+  }
+}
+
+@media (min-width: 1080px) {
+  .grid-col--2 {
+    display: block;
+  }
+  .grid-col--3 {
+    display: block;
+  }
+}

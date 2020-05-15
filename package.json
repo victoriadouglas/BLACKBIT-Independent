@@ -38,6 +38,7 @@
     "sass": "^1.26.5"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.13.0"
+    "@fortawesome/fontawesome-free": "^5.13.0",
+    "colcade": "^0.2.0"
   }
 }

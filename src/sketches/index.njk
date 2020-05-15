@@ -1,0 +1,47 @@
+---
+layout: layouts/base.njk
+title: Sketches
+description: Oodles of noodles.
+logo: emojipencils
+backgroundcolor: e8ff00
+eleventyNavigation:
+  key: Sketches
+  order: 2
+sketches:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 10
+  - 6
+  - 7
+  - 8
+  - 9
+---
+
+
+<div class="container">
+{% include "components/header.njk" %}
+</div>
+
+<div class="bigcontainer">
+<div class="grid">
+<div class="grid-col grid-col--1">
+</div>
+<div class="grid-col grid-col--2">
+</div>
+<div class="grid-col grid-col--3">
+</div>
+{% for item in sketches %}
+      <img class="grid-item" src="/img/sketches/{{ item }}.jpg"/>
+{% endfor %}
+</div>
+</div>
+<script>
+// selector string as first argument
+var colc = new Colcade( '.grid', {
+  columns: '.grid-col',
+  items: '.grid-item'
+});
+</script>
