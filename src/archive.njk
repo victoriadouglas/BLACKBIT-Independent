@@ -1,13 +1,12 @@
 ---
 layout: layouts/home.njk
+title: Blog Archive
+description: I ramble on and on, in perpetum.
 permalink: /posts/
 navlogo: emojiskull
 eleventyNavigation:
   key: blog
   order: 7
 ---
-
-<h1>Archive</h1>
-
 {% set postslist = collections.posts %}
 {% include "components/postslist.njk" %}
