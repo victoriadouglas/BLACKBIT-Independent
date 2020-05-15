@@ -21,6 +21,7 @@
     // victoria douglas 2020 ++
     </p>
     {% include "components/accent.njk" %}
+
     <style>
     {% if backgroundimage %}
     body {background-image: url("{{ backgroundimage }}");}
@@ -29,6 +30,11 @@
     {% else %}
     body {background-color: #f0f0f0;
     {% endif %}
+    {% if navbarcolor %}
+    .navbar {background-color: {{ navbarcolor }};}
+      {% else %}
+      .navbar {background: none;}
+      {% endif %}
     </style>
 
 

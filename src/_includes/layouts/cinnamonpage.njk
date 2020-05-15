@@ -1,7 +1,8 @@
 ---
 layout: layouts/base.njk
 titleimage: /img/logo/cinnamonlogo.png
-backgroundimage: /img/background/cinnamonbackground.jpg
+backgroundimage: /img/background/cinnamonbackground2.jpg
+navbarcolor: rgba(215, 23, 91, .9)
 navlogo: emojicats
 ---
 <main>
@@ -10,8 +11,8 @@ navlogo: emojicats
 
 
 
-{% include "components/cinnamonnav.njk" %}
-<div class="testcomicnav"></div>
+
+<img style="margin-top:20px;" src="/img/logo/cinnamoncomictitle.png"/>
 <img class="comicpage" src="/img/{{ title }}/{{ chapter }}-{{ pagenumber }}.jpg"/>
 {% include "components/cinnamonnav.njk" %}
 <div class="mangapage" style="grid-template-columns: 1fr 5fr;" >
