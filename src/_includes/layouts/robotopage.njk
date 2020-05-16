@@ -1,0 +1,27 @@
+---
+layout: layouts/base.njk
+titleimage: /img/logo/robotologo.png
+navlogo: emojiskull
+---
+<main>
+
+
+
+
+
+<div class="container">
+<img class="cinnatitle" style="margin-top:20px;" src="/img/logo/robotologo.png"/>
+</div>
+<img style="border: 8px double black;"class="comicpage" src="/img/{{ title }}/{{ chapter }}-{{ pagenumber }}.jpg"/>
+<div class="container">
+{% include "components/robotonav.njk" %}
+<div class="mangapage" style="grid-template-columns: 1fr 5fr;" >
+<div class="mangahalftone"></div>
+<div class="mangacontent mangapaper">
+<h1>{{ title }} {{chapter}}.{{ pagenumber }}</h1>
+<p class="datedisplay"> <small>{{ date }}</small> </p>
+{{ content | safe }}
+</div>
+</div>
+</div>
+</main>

@@ -1,0 +1,46 @@
+
+<div class="comicnav">
+
+{% set previousPost = collections.roboto | getPreviousCollectionItem(page) %}
+{% set nextPost = collections.roboto | getNextCollectionItem(page) %}
+
+{% for entry in collections.roboto | reverse | head(-1) %}
+{% if page.url == entry.url %}
+<img src="/img/roboto-nav-first-disabled.png"/>
+{% else %}
+<a href="{{ entry.url }}"><img src="/img/roboto-nav-first-hover.png"/></a>
+{% endif %}
+{% endfor %}
+
+{% if previousPost %}
+<a href="{{ previousPost.url }}"><img src="/img/roboto-nav-back-hover.png"/></a>
+{% else %}
+<img src="/img/roboto-nav-back-disabled.png"/>
+{% endif %}
+
+<div class="minicomicnav">
+</div>
+
+{% if nextPost %}
+<a href="{{ nextPost.url }}"><img src="/img/roboto-nav-forward-hover.png"/></a>
+{% else %}
+<img src="/img/roboto-nav-forward-disabled.png"/>
+{% endif %}
+
+{% for entry in collections.roboto | head(-1) %}
+{% if page.url == entry.url %}
+<img src="/img/roboto-nav-latest-disabled.png"/>
+{% else %}
+<a href="{{ entry.url }}"><img src="/img/roboto-nav-latest-hover.png"/></a>
+{% endif %}
+{% endfor %}
+
+</div>
+<div class="minicomicnav">
+<select id="page select" onchange="location = this.value;">
+  <option value="">PAGE SELECT</option>
+  {% for entry in collections.roboto %}
+  <option value="{{ entry.url }}">{{ entry.data.title }} {{ entry.data.chapter }}.{{ entry.data.pagenumber }}</option>
+  {% endfor %}
+</select>
+</div>

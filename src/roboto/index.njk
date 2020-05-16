@@ -1,0 +1,10 @@
+---
+layout: layouts/comicarchive.njk
+title: Roboto
+navlogo: emojicats
+titleimage: /img/logo/robotologo.png
+---
+
+{% set postslist = collections.roboto %}
+{% set postslistCounter = collections.roboto | length %}
+{% include "components/postslist.njk" %}
