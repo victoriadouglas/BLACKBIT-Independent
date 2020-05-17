@@ -12,6 +12,8 @@
     <script src="https://unpkg.com/colcade@0/colcade.js"></script>
   </head>
   <body>
+    <div class="footerseating">
+    <div class="notfooter">
     {% include "components/navbar.njk" %}
     {{ content | safe }}
 
@@ -36,11 +38,11 @@
       .navbar {background: none;}
       {% endif %}
     </style>
+  </div>
 
 
-
-    <footer>
-
+    <footer class="footer">
+    {% include "components/footer.njk" %}
     <script>
 function myFunction() {
   var x = document.getElementById("navcollapse");
@@ -53,6 +55,6 @@ function myFunction() {
 </script>
     </footer>
     <!-- Current page: {{ page.url | url }} -->
-
+    </div>
   </body>
 </html>

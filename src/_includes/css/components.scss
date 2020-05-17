@@ -285,3 +285,19 @@
     margin-bottom: 0.5rem;
   }
 }
+
+/* Footer */
+
+.footerseating {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+.footer {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  width: 100vw;
+  min-height: 100px;
+  background-color: #282828;
+}
