@@ -92,6 +92,10 @@
   }
 }
 
+.navstuff {
+  padding-right: 30px;
+}
+
 @media screen and (max-width: 800px) {
   .navstuff {
     display: none;
@@ -110,12 +114,13 @@
     transition: all 0.2s;
     position: absolute;
     display: inline-block;
-    right: 0;
+    right: 20px;
   }
   .navstuff.responsive .icon {
     position: absolute;
     right: 0;
     top: 0;
+    padding-right: 30px;
   }
   .navstuff.responsive a {
     float: none;

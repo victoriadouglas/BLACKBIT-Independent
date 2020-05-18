@@ -134,12 +134,22 @@ $halftone: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKL
   font-family: Antihuman, arial, sans-serif;
   letter-spacing: auto;
   font-weight: 100;
-  font-size: 4vw;
+  font-size: 11vw;
   margin-top: 3vw;
   line-height: 70%;
-  border-top: 10px double black;
   margin-bottom: 0;
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAF0lEQVQYlWNgYGD4D8U4AUEF1Af0dhMAOBcH+bmFHC0AAAAASUVORK5CYII=);
+}
+
+@media (min-width: 700px) {
+  .heading {
+    font-size: 9vw;
+  }
+}
+@media (min-width: 700px) {
+  .heading {
+    font-size: 8vw;
+  }
 }
 
 .comicpage {
