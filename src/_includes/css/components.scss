@@ -187,13 +187,12 @@
     width: 100%;
   }
   div {
-    border: 3px solid black;
     min-height: 100px;
   }
 }
 
 .mangapaper {
-  background-color: rgba(234, 234, 234, 0.8);
+  background-color: rgba(234, 234, 234, 0.95);
 }
 
 .mangacontent {
@@ -279,7 +278,7 @@
   justify-items: center;
 
   select {
-    width: 960px;
+    width: 200px;
     max-width: 90vw;
     padding: 0.5rem;
     margin-bottom: 0.5rem;
@@ -300,4 +299,10 @@
   width: 100vw;
   min-height: 100px;
   background-color: #282828;
+  h1,
+  h2,
+  h3,
+  p {
+    color: #f0f0f0;
+  }
 }

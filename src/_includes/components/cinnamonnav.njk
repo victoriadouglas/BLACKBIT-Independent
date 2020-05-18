@@ -19,7 +19,12 @@
 {% endif %}
 
 <div class="minicomicnav">
-<img src="/img/logo/cinnamonnavlogo.png"/>
+<select id="page select" onchange="location = this.value;">
+  <option value="">PAGE SELECT</option>
+  {% for entry in collections.cinnamon %}
+  <option value="{{ entry.url }}">{{ entry.data.title }} {{ entry.data.chapter }}.{{ entry.data.pagenumber }}</option>
+  {% endfor %}
+</select>
 </div>
 
 {% if nextPost %}
@@ -38,14 +43,9 @@
 
 </div>
 <div class="minicomicnav">
-<select id="page select" onchange="location = this.value;">
-  <option value="">PAGE SELECT</option>
-  {% for entry in collections.cinnamon %}
-  <option value="{{ entry.url }}">{{ entry.data.title }} {{ entry.data.chapter }}.{{ entry.data.pagenumber }}</option>
-  {% endfor %}
-</select>
+
 </div>
 
 <style>
-.comicnav { background-color: rgba(234, 76, 90, 0.8);}
+.comicnav { background-color:  rgba(234, 234, 234, 0.95);}
 </style>
