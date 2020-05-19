@@ -29,10 +29,9 @@ navlogo: emojicats
 
 <script>
 var disqus_config = function () {
-this.page.url = {{ page.url | url }};  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = {{page.title}}-{{page.chaper}}-{{page.pagenumber}}; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+this.page.url = '{{ page.url | url }}';
+this.page.identifier = '{{ page.url | url }}';
 };
-
 (function() { // DON'T EDIT BELOW THIS LINE
 var d = document, s = d.createElement('script');
 s.src = 'https://blackbit-1.disqus.com/embed.js';
