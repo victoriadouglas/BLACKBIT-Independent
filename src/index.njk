@@ -4,14 +4,30 @@ title: blackbit
 description: original sci-fi comics by victoria douglas
 navlogo: emojiskull
 ---
+<a class="newscta" href="/cinnamon/episode1/page1/"><img src="/img/promo/news.jpg"/></a>
 
-<h1>Latest 3 Posts</h1>
+<div class="mangahalftone mangapanel" style="width:960px; min-height: 500px;">
+<h1>More comics</h1>
+</div>
 
+<div class="blogsect">
+<div class="mangahalftone mangapanel">
+</div>
+<div class="mangapad">
+<h1>Latest Blogz</h1>
 {% set postslist = collections.posts | head(-3) %}
 {% set postslistCounter = collections.posts | length %}
 {% include "components/postslist.njk" %}
-
 <p>More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>
+</div>
+</div>
+
+<div style="width: 100%;">
+<div style="width: 450px; max-width: 100%; margin: 50px auto;">
+<h1>Manifesto</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vulputate mauris sit amet leo porttitor, blandit luctus ex aliquet. Donec quis risus leo. Nulla facilisi. Quisque finibus viverra velit, vel maximus lacus congue sodales. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur ac lectus lacinia, suscipit enim vitae, blandit turpis. Duis a sodales est, sodales blandit nisi. Nunc convallis sit amet quam eu vehicula. Ut aliquam nisi id urna maximus rutrum. Etiam in dui molestie, fermentum diam in, ullamcorper sapien. </p>
+</div>
+</div>
 <img src="img/cinnamon-riffs.jpg" alt="Flowers in Chania">
 
 {% for entry in collections.cinnamon %}

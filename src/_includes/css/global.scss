@@ -39,15 +39,7 @@ body {
 }
 
 .signature {
-  position: fixed;
-  padding: 5px;
-  transform-origin: left;
-  transform: rotate(-90deg);
-  bottom: 40%;
-  left: 1.5vw;
-  margin: 0;
-  background-color: rgba(255, 255, 255, 0.4);
-  z-index: -5;
+  display: none;
 }
 
 .svgaccent {
@@ -61,6 +53,19 @@ body {
     position: fixed;
     bottom: 40%;
     right: 2vw;
+  }
+
+  .signature {
+    display: block;
+    position: fixed;
+    padding: 5px;
+    transform-origin: left;
+    transform: rotate(-90deg);
+    bottom: 40%;
+    left: 1.5vw;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.4);
+    z-index: -5;
   }
 }
 
