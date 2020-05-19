@@ -318,13 +318,21 @@
   h1,
   h2,
   h3,
+  i,
   p {
     color: #f0f0f0;
+    padding: 1rem;
   }
+}
+
+.footergrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 /* Social Widget */
 .socialjunk {
+  margin: 0 auto;
   padding: 0.9rem;
   p {
     text-align: right;
@@ -335,8 +343,8 @@
     text-decoration: none;
     background: none;
     i {
-      color: black;
-      padding: 0.2rem;
+      color: #f0f0f0;
+      padding: 1rem;
       font-size: 1.5rem;
       display: inline-block;
     }
