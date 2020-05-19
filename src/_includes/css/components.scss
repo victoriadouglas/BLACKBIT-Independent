@@ -217,14 +217,17 @@
   .grid-col {
     flex: 1;
   }
+  .imagediv {
+    padding: 10px;
+  }
   img {
     width: 100%;
-    padding: 10px;
   }
 }
 
 .grid-col--2,
-.grid-col--3 {
+.grid-col--3,
+.grid-col--4 {
   display: none;
 }
 
@@ -233,6 +236,9 @@
     display: block;
   }
   .grid-col--3 {
+    display: block;
+  }
+  .grid-col--4 {
     display: none;
   }
 }
@@ -242,6 +248,9 @@
     display: block;
   }
   .grid-col--3 {
+    display: block;
+  }
+  .grid-col--4 {
     display: block;
   }
 }

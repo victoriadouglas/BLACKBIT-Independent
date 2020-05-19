@@ -3,15 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
-
     <title>{{ renderData.title or title or metadata.title }}</title>
     <meta name="Description" content="{{ renderData.description or description or metadata.description }}">
     <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
     <link rel="stylesheet" href="{{ '/css/all.min.css' | url }}">
-    <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
-    <script src="https://unpkg.com/colcade@0/colcade.js"></script>
+    <script src="/js/colcade.js"></script>
     <script src="/js/hammer.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"> 
   </head>
@@ -35,7 +32,7 @@
       {% else %}
       .navstuff {background: none;}
       {% endif %}
-      
+
 {% if backgroundimage %}
     body {background-image: url("{{ backgroundimage }}");}
     {% endif %}

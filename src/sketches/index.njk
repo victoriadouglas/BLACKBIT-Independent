@@ -3,7 +3,7 @@ layout: layouts/base.njk
 title: Sketch
 description: Oodles of noodles.
 logo: emojipencils
-backgroundcolor: e8ff00
+backgroundcolor: 878787
 eleventyNavigation:
   key: Sketches
   order: 2
@@ -31,8 +31,12 @@ sketches:
 </div>
 <div class="grid-col grid-col--3">
 </div>
+<div class="grid-col grid-col--4">
+</div>
 {% for item in sketches %}
-      <img class="grid-item" src="/img/sketches/{{ item }}.jpg"/>
+<div class="grid-item imagediv">
+      <img class="mangapanel" src="/img/sketches/{{ item }}.jpg"/>
+      </div>
 {% endfor %}
 </div>
 </div>
