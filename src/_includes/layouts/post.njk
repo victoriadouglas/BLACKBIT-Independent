@@ -1,6 +1,5 @@
 ---
 layout: layouts/base.njk
-templateClass: tmpl-post
 ---
 <main>
 <div class="container">
@@ -9,5 +8,7 @@ templateClass: tmpl-post
 {{ content | safe }}
 
 <p><a href="{{ '/' | url }}">← Home</a></p>
+{% include "components/disquscomments.njk" %}
 </div>
+
 </main>

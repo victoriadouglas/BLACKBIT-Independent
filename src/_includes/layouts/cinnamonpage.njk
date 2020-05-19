@@ -3,7 +3,6 @@ layout: layouts/base.njk
 backgroundimage: /img/background/cinnamonbackground2.jpg
 navbarcolor: rgb(240, 240, 240)
 navlogo: emojicats
-comments: true
 ---
 <main>
 
@@ -16,10 +15,12 @@ comments: true
 
 
 <!-- Comic Page -->
-<img class="comicpage" src="/img/{{ title }}/{{ chapter }}-{{ pagenumber }}.jpg"/>
+<div class="comicpage">
+<img src="/img/{{ title }}/{{ chapter }}-{{ pagenumber }}.jpg"/>
+</div>
+
+
 <div class="container">
-
-
 <!-- Comic Nav -->
 {% include "components/comicsnav.njk" %}
 
