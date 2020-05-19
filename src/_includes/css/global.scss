@@ -131,14 +131,15 @@ $halftone: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKL
 
 .subtitle {
   border-bottom: 5px double $line-color;
-  width: 50%;
+  width: 100%;
   font-style: italic;
-  line-height: 0.5 rem;
+  line-height: 0.5rem;
 }
 
 /* -------------------- Page Layouts -------------------- */
 
 main {
+  min-height: 70vh;
   max-width: 98vw;
   margin: 0 auto;
   img {
