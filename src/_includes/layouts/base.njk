@@ -30,18 +30,24 @@
     {% include "components/accent.njk" %}
 
     <style>
-    {% if backgroundimage %}
-    body {background-image: url("{{ backgroundimage }}");}
-    {% elif backgroundcolor %}
-    body {background-color:#{{ backgroundcolor }};
-    {% else %}
-    body {background-color: #f0f0f0;
-    {% endif %}
     {% if navbarcolor %}
     .navstuff {background-color: {{ navbarcolor }};}
       {% else %}
       .navstuff {background: none;}
       {% endif %}
+      
+{% if backgroundimage %}
+    body {background-image: url("{{ backgroundimage }}");}
+    {% endif %}
+    
+
+    {% if backgroundcolor %}
+    body {background-color:#{{ backgroundcolor }};
+    {% else %}
+    body {background-color: #f0f0f0;
+    {% endif %}
+
+    
     </style>
   </div>
 
