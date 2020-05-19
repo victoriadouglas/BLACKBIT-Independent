@@ -1,10 +1,10 @@
 
 <div class="comicnav">
 
-{% set previousPost = collections.cinnamon | getPreviousCollectionItem(page) %}
-{% set nextPost = collections.cinnamon | getNextCollectionItem(page) %}
+{% set previousPost = pagelist | getPreviousCollectionItem(page) %}
+{% set nextPost = pagelist | getNextCollectionItem(page) %}
 
-{% for entry in collections.cinnamon | reverse | head(-1) %}
+{% for entry in pagelist | reverse | head(-1) %}
 {% if page.url == entry.url %}
 <img src="/img/cinnamon-nav-first-disabled.png"/>
 {% else %}
@@ -21,7 +21,7 @@
 <div class="minicomicnav">
 <select id="page select" onchange="location = this.value;">
   <option value="">PAGE SELECT</option>
-  {% for entry in collections.cinnamon %}
+  {% for entry in pagelist %}
   <option value="{{ entry.url }}">{{ entry.data.title }} {{ entry.data.chapter }}.{{ entry.data.pagenumber }}</option>
   {% endfor %}
 </select>
@@ -33,7 +33,7 @@
 <img src="/img/cinnamon-nav-forward-disabled.png"/>
 {% endif %}
 
-{% for entry in collections.cinnamon | head(-1) %}
+{% for entry in pagelist | head(-1) %}
 {% if page.url == entry.url %}
 <img src="/img/cinnamon-nav-latest-disabled.png"/>
 {% else %}

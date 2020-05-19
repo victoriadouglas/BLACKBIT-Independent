@@ -1,22 +1,28 @@
 ---
 layout: layouts/base.njk
-titleimage: /img/logo/robotologo.png
 navlogo: emojiskull
+comments: true
 ---
 <main>
 
 
+{% set comictitle = "/img/logo/robototitle.png" %}
+{% set pagelist = collections.roboto %}
 
+<!-- Title -->
+{% include "components/comictitle.njk" %}
 
-
-<div class="container">
-<img class="cinnatitle" style="margin-top:20px;" src="/img/logo/robotologo.png"/>
-</div>
+<!-- Comic Page -->
 <img style="-webkit-box-shadow: 10px 10px 21px 0px rgba(0,0,0,0.8);
 -moz-box-shadow: 10px 10px 21px 0px rgba(0,0,0,0.8);
 box-shadow: 10px 10px 21px 0px rgba(0,0,0,0.8);"class="comicpage" src="/img/{{ title }}/{{ chapter }}-{{ pagenumber }}.jpg"/>
 <div class="container">
-{% include "components/robotonav.njk" %}
+
+<!-- Comic Nav -->
+{% include "components/comicsnav.njk" %}
+
+
+<!-- Journal -->
 <div class="mangapage" style="grid-template-columns: 1fr 5fr;" >
 <div class="mangahalftone"></div>
 <div class="mangacontent mangapaper">
@@ -25,5 +31,8 @@ box-shadow: 10px 10px 21px 0px rgba(0,0,0,0.8);"class="comicpage" src="/img/{{ t
 {{ content | safe }}
 </div>
 </div>
-</div>
+
+<!-- Disqus Comments -->
+{% include "components/disquscomments.njk" %}
+
 </main>

@@ -1,22 +1,30 @@
 ---
 layout: layouts/base.njk
-titleimage: /img/logo/cinnamonlogo.png
 backgroundimage: /img/background/cinnamonbackground2.jpg
 navbarcolor: rgb(240, 240, 240)
 navlogo: emojicats
+comments: true
 ---
 <main>
 
+{% set comictitle = "/img/logo/cinnamontitle.png" %}
+{% set pagelist = collections.cinnamon %}
 
 
+<!-- Title -->
+{% include "components/comictitle.njk" %}
 
 
-<div class="container">
-<img class="cinnatitle" style="margin-top:20px;" src="/img/logo/cinnamoncomictitle.png"/>
-</div>
+<!-- Comic Page -->
 <img class="comicpage" src="/img/{{ title }}/{{ chapter }}-{{ pagenumber }}.jpg"/>
 <div class="container">
-{% include "components/cinnamonnav.njk" %}
+
+
+<!-- Comic Nav -->
+{% include "components/comicsnav.njk" %}
+
+
+<!-- Journal -->
 <div class="mangapage" style="grid-template-columns: 1fr 5fr;" >
 <div class="mangahalftone"></div>
 <div class="mangacontent mangapaper">
@@ -25,21 +33,8 @@ navlogo: emojicats
 {{ content | safe }}
 </div>
 </div>
-<div id="disqus_thread"></div>
 
-<script>
-var disqus_config = function () {
-this.page.url = 'https://blackbit.netlify.app{{ page.url | url }}';
-this.page.identifier = '{{ page.url | url }}';
-};
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://blackbit-1.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                            
-</div>
+
+<!-- Disqus Comments -->
+{% include "components/disquscomments.njk" %}
 </main>
