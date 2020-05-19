@@ -12,11 +12,13 @@ navlogo: emojiskull
 {% include "components/comictitle.njk" %}
 
 <!-- Comic Page -->
+<div class="comicpage">
 <img style="-webkit-box-shadow: 10px 10px 21px 0px rgba(0,0,0,0.8);
 -moz-box-shadow: 10px 10px 21px 0px rgba(0,0,0,0.8);
-box-shadow: 10px 10px 21px 0px rgba(0,0,0,0.8);"class="comicpage" src="/img/{{ title }}/{{ chapter }}-{{ pagenumber }}.jpg"/>
-<div class="container">
+box-shadow: 10px 10px 21px 0px rgba(0,0,0,0.8);" src="/img/{{ title }}/{{ chapter }}-{{ pagenumber }}.jpg"/>
+</div>
 
+<div class="container">
 <!-- Comic Nav -->
 {% include "components/comicsnav.njk" %}
 

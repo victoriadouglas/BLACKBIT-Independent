@@ -15,7 +15,7 @@ navlogo: emojicats
 
 
 <!-- Comic Page -->
-<div class="comicpage">
+<div class="comicpage" id="comicpage">
 <img src="/img/{{ title }}/{{ chapter }}-{{ pagenumber }}.jpg"/>
 </div>
 
@@ -39,3 +39,18 @@ navlogo: emojicats
 <!-- Disqus Comments -->
 {% include "components/disquscomments.njk" %}
 </main>
+
+<!-- Hammer JS Scripts -->
+<script type="text/javascript">
+
+var myElement = document.getElementById('comicpage');
+
+var hammertime = new Hammer(myElement);
+hammertime.on('swiperight', function(ev) {
+	alert("panright!");
+});
+hammertime.on('swipeleft', function(ev) {
+	alert("panleft!");
+});
+
+</script>

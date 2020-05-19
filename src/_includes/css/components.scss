@@ -110,7 +110,7 @@
 @media screen and (max-width: 800px) {
   .navstuff.responsive {
     padding-bottom: 20px;
-    background-color: $background-color;
+    background-color: white;
     margin-top: 50px;
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
@@ -168,6 +168,7 @@
 /* -------------------- Manga Panel Utilities -------------------- */
 
 .mangapage {
+  max-width: 95vw;
   margin-top: 10px;
   margin-bottom: 20px;
   display: grid;
@@ -292,7 +293,7 @@
 .footer {
   grid-row-start: 2;
   grid-row-end: 3;
-  width: 100vw;
+  width: 100%;
   min-height: 100px;
   background-color: $dark-grey;
   h1,
