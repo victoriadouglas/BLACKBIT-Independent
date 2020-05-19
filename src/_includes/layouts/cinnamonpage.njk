@@ -41,16 +41,4 @@ navlogo: emojicats
 </main>
 
 <!-- Hammer JS Scripts -->
-<script type="text/javascript">
-
-var myElement = document.getElementById('comicpage');
-
-var hammertime = new Hammer(myElement);
-hammertime.on('swiperight', function(ev) {
-	alert("panright!");
-});
-hammertime.on('swipeleft', function(ev) {
-	alert("panleft!");
-});
-
-</script>
+{% include "components/hammerjs.njk" %}

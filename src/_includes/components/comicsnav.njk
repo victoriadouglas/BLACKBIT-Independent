@@ -13,7 +13,7 @@
 {% endfor %}
 
 {% if previousPost %}
-<a href="{{ previousPost.url }}"><img src="/img/cinnamon-nav-back-hover.png"/></a>
+<a id="prevbutton" href="{{ previousPost.url }}"><img src="/img/cinnamon-nav-back-hover.png"/></a>
 {% else %}
 <img src="/img/cinnamon-nav-back-disabled.png"/>
 {% endif %}
@@ -28,7 +28,7 @@
 </div>
 
 {% if nextPost %}
-<a href="{{ nextPost.url }}"><img src="/img/cinnamon-nav-forward-hover.png"/></a>
+<a id="nextbutton" href="{{ nextPost.url }}"><img src="/img/cinnamon-nav-forward-hover.png"/></a>
 {% else %}
 <img src="/img/cinnamon-nav-forward-disabled.png"/>
 {% endif %}

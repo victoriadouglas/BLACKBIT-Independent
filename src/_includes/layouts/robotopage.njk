@@ -12,7 +12,7 @@ navlogo: emojiskull
 {% include "components/comictitle.njk" %}
 
 <!-- Comic Page -->
-<div class="comicpage">
+<div class="comicpage" id="comicpage">
 <img style="-webkit-box-shadow: 10px 10px 21px 0px rgba(0,0,0,0.8);
 -moz-box-shadow: 10px 10px 21px 0px rgba(0,0,0,0.8);
 box-shadow: 10px 10px 21px 0px rgba(0,0,0,0.8);" src="/img/{{ title }}/{{ chapter }}-{{ pagenumber }}.jpg"/>
@@ -35,5 +35,8 @@ box-shadow: 10px 10px 21px 0px rgba(0,0,0,0.8);" src="/img/{{ title }}/{{ chapte
 
 <!-- Disqus Comments -->
 {% include "components/disquscomments.njk" %}
-
 </main>
+
+<!-- Hammer JS Scripts -->
+{% include "components/hammerjs.njk" %}
+
