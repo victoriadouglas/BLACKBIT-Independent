@@ -184,7 +184,7 @@
 
 .mangapage {
   margin-top: 10px;
-  margin-bottom: 200px;
+  margin-bottom: 20px;
   display: grid;
   grid-gap: 10px;
   img {
@@ -385,4 +385,11 @@
   display: grid;
   grid-gap: 20px;
   grid-template-columns: 1fr 1fr;
+}
+
+/*Disqus Styling*/
+#disqus_thread {
+  background-color: #f0f0f0;
+  padding: 20px;
+  margin-bottom: 150px;
 }
