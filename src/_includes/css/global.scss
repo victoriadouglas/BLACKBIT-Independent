@@ -132,8 +132,14 @@ $halftone: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKL
 .subtitle {
   border-bottom: 5px double $line-color;
   width: 100%;
+  height: auto;
+  margin: 10px auto 50px;
+  margin-bottom: 0 auto 50px;
   font-style: italic;
   line-height: 0.5rem;
+  p {
+    padding-bottom: 0px;
+  }
 }
 
 /* -------------------- Page Layouts -------------------- */
