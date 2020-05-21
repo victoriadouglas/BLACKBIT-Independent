@@ -27,6 +27,9 @@
       {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
       <div class="navstuff" id="navcollapse">
       {%- for entry in collections.all | eleventyNavigation %}<a class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}" href="{{ entry.url | url }}">.{{ entry.title }}</a>{%- endfor %}
+      <a class="nav-item" href="https://www.instagram.com/blackbit.exe/"><sub><i class="fab fa-instagram"></i></sub></a>
+      <a class="nav-item" href="/"><sub><i class="fab fa-vimeo"></i></i></sub></a>
+      <a class="nav-item" href="/"><sub><i class="fab fa-github-alt"></i></i></sub></a>
       </div> 
       <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
