@@ -3,11 +3,17 @@ layout: layouts/base.njk
 ---
 <main>
 <div class="container">
-<h1>{{ title }}</h1>
+{% if thumbnail %}
+<img style="max-width: 100%" src="{{ thumbnail }}"/>
+{% endif %}
+<h1 style="margin-bottom:0;">{{ title }}</h1>
+<p style="margin:0 0 30px;"><small>{{ description }}</small></p>
+<hr>
 
 {{ content | safe }}
-
+<div style="height:150px;"></div>
 <p><a href="{{ '/' | url }}">← Home</a></p>
+<p><a href="{{ '/posts/' | url }}">Blog Archive</a></p>
 {% include "components/disquscomments.njk" %}
 </div>
 

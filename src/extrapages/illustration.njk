@@ -1,10 +1,13 @@
 ---
 layout: layouts/base.njk
-title: Sketch
-description: Oodles of noodles.
+title: Illustr8
+description: Serving serving narratives.
 logo: emojipencils
 backgroundcolor: 878787
-permalink: /sketches/
+permalink: /illustration/
+eleventyNavigation:
+  key: Illustration
+  order: 3
 sketches:
   - 2
   - 3
@@ -48,7 +51,9 @@ sketches:
 </div>
 {% for item in sketches %}
 <div class="grid-item imagediv">
-      <img class="mangapanel" src="/img/sketches/{{ item }}.jpg"/>
+      <img style="border-radius:5px;-webkit-box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.5);
+-moz-box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.5);
+box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.5);" src="/img/sketches/{{ item }}.jpg"/>
       </div>
 {% endfor %}
 </div>
