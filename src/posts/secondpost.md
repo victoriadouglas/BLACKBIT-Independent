@@ -5,7 +5,6 @@ date: 2019-03-04
 tags:
   - illustration
   - tutorial
-layout: layouts/post.njk
 ---
 
 Checking your values is an important step in any artist's workflow, and you should be doing it often. It's especially easy in a digital environment, but Photoshop has a few pitfalls. When I ask artists how they check their values, I overwhelmingly get the same answer. Add a Hue/Saturation adjustment layer to the top of your stack, and DROP. THAT. SATCH. Get that saturation to the floor.

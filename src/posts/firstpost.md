@@ -6,7 +6,6 @@ date: 2017-07-07
 tags:
   - life
   - web
-layout: layouts/post.njk
 ---
 
 I did it because I wanted to.
