@@ -1,7 +1,10 @@
 ---
-title: Harry Potter Tier List
-description: ranking students of Garreg Mach Monastery in a completely unbiased fashion
-permalink: /fire-emblem/
+title: Unbiased Fire Emblem Tier List
+description: This is a post on My Blog about win-win survival strategies.
+date: 2020-02-18
+draft: true
+tags:
+  - gaming
 ---
 
 I'm **not** about to touch the question of which house is the best. I love them all. Especially Blue Lions.
@@ -40,7 +43,7 @@ Ashe - Naive, innocent, I hate his voice but I love Ashe
 Ingrid - more than a bit racist, but working on it?
 Annette - I have no reason to hate her, but she's boring
 Seteth - nice stick up your butt lol
-Marianne - discount horsegirl Bernadetta
+Marianne - horsegirl Bernadetta
 
 # F:
 
@@ -50,12 +53,14 @@ Felix - too much of a bad boy to ever redeem himself
 Petra - it's my fault for not playing through Black Eagles yet, I just don't care about Petra yet
 Cyril - ignorant loyal, probably whacks it to Lady Rhea
 Ferdinand - his personality is "top shelf white bread"
-Raphael - let him remind you how dumb he is at every turn
-Caspar - stop trying to fight me just because you u are short
+Raphael - let him remind you how not-smart he is at every turn
+Caspar - stop trying to fight me just because you are short
 Leonie - Get off Jeralt's dongus and help me save the world huh?
 
 # So much F it loops back to S+:
 
 Lorenz - I hate him so much, so so much. But then post timeskip he is an adonis. Best hair in the game, and I resent that.
 
-<div style="height:150px;"></div>
+## But Wait!
+
+I forgot to mention that I'm grading on a curve, so everyone gets an A. Seriously, go play Fire Emblem: Three Houses.

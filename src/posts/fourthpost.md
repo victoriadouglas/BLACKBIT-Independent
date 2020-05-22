@@ -1,15 +1,15 @@
 ---
-title: This is my fourth post.
-description: This is a post on My Blog about touchpoints and circling wagons.
-date: 2018-09-30
-tags: second-tag
+title: Happy Graduation 2020
+description: a weird time to be trying to do anything.
+date: 2020-05-21
+tags: life
 layout: layouts/post.njk
 ---
-Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
 
-Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.
+First of all, huge congrats to the entire CCAD graduating class of 2020. It's a big deal. I'm honored to have graduated college alongside so many talented people from so many walks of life.
 
-## Section Header
+It's a tough time. COVID-19 took a huge bite out of academia, and everyone has been scrambling for answers and solutions. My last semester was the weirdest of my entire life. It's the perfect capstone to the meandering and circuituous route I've taken to get this degree over the past ten years. I definitely had some romanticized ideas about _that day_. It was very bittersweet. I loved every second I had at the Columbus College of Art and Design, it changed my life for the better. I gush about that all the time, and it will never stop being true.
 
-Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.
+It's a weird time to be entering the work force. Quarantine is slowly petering out, we are all poking our heads out of the rabbit holes.
 
+The future is looking bright, but that might just be the horizon on fire.
