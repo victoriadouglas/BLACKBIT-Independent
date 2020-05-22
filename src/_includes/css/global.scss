@@ -24,7 +24,7 @@
 h1 {
   font-family: Blackout, Arial, Helvetica, sans-serif;
   font-weight: 400;
-  font-size: 3rem;
+  font-size: 4rem;
   letter-spacing: auto;
   padding-bottom: 0;
   margin-bottom: 10px;
@@ -143,7 +143,7 @@ $halftone: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKL
   border-bottom: 5px double $line-color;
   width: 100%;
   height: auto;
-  margin: 10px auto 50px;
+  margin: 30px auto 50px;
   margin-bottom: 0 auto 50px;
   font-style: italic;
   line-height: 0.5rem;
@@ -275,7 +275,7 @@ main {
 /* -------------------- Index Styling -------------------- */
 
 .blogsect {
-  margin-top: 100px;
+  margin-top: 50px;
   display: grid;
   max-width: 95vw;
   grid-gap: 20px;
@@ -298,8 +298,8 @@ main {
 }
 
 .animsect {
-  margin: 20px auto;
-  margin-top: 100px;
+  margin: 0px auto;
+  margin-top: 50px;
   display: grid;
   max-width: 95vw;
   grid-gap: 20px;
@@ -308,12 +308,28 @@ main {
   grid-template-rows: auto 1fr auto;
   div:first-child {
     border: 3px solid $line-color;
+    border-radius: 5px;
+    -webkit-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
   }
   div:last-child {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAF0lEQVQYlWNgYGD4D8U4AUEF1Af0dhMAOBcH+bmFHC0AAAAASUVORK5CYII=);
     background-size: 10px;
-    height: 50px;
-    border: 3px solid $line-color;
+    height: 100px;
+    border-radius: 5px;
+    -webkit-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
+    h1 {
+      padding-left: 10px;
+      color: $line-color;
+    }
+    h1:hover {
+      color: white;
+      background-color: $line-color;
+      transition: 0.3s;
+    }
   }
   h1 {
     padding: 0;
@@ -335,6 +351,10 @@ main {
   padding-bottom: 56.25%; /* 16:9 */
   height: 0;
   iframe {
+    border-radius: 5px;
+    -webkit-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
     position: absolute;
     top: 0;
     left: 0;
@@ -343,11 +363,37 @@ main {
   }
 }
 
-.animbox {
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAF0lEQVQYlWNgYGD4D8U4AUEF1Af0dhMAOBcH+bmFHC0AAAAASUVORK5CYII=);
-  background-size: 10px;
-  height: 100px;
-  border: 3px solid $line-color;
+.illustrationbutton {
+  display: block;
+  margin: 100px auto;
+  background: none;
+  h1 {
+    color: $line-color;
+    position: absolute;
+    margin: 10px;
+    font-size: 3rem;
+    padding-left: 10px;
+    padding-right: 10px;
+    opacity: 1;
+    background-color: white;
+  }
+  p {
+    top: 150px;
+    position: relative;
+    color: $line-color;
+  }
+  img {
+    border-radius: 5px;
+    -webkit-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.illustrationbutton:hover {
+  opacity: 0.7;
+  transition: 0.3s;
+  background: none;
 }
 
 @media only screen and (min-width: 700px) {
