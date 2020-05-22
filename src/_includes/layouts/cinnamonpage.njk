@@ -28,13 +28,16 @@ navlogo: emojicats
 
 <!-- Journal -->
 <div class="mangapage" style="grid-template-columns: 1fr 5fr;" >
-<div class="mangahalftone"></div>
-<div class="mangacontent mangapaper">
+<div class="mangahalftone mangapanel"></div>
+<div class="mangacontent mangapaper mangapanel">
 <h1>{{ title }} {{chapter}}.{{ pagenumber }}</h1>
 <p class="datedisplay"> <small>{{ date }}</small> </p>
 {{ content | safe }}
 </div>
 </div>
+
+<!-- CTA -->
+<a style="margin-bottom:50px;display: block;"target="blank" class="newswidget" href="https://gumroad.com/blackbit#OkHhl"><img src="/img/cinnamoncta.jpg"/></a>
 
 
 <!-- Disqus Comments -->

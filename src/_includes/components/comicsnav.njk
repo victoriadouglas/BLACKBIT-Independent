@@ -1,5 +1,5 @@
 
-<div class="comicnav">
+<div class="comicnav mangapanel">
 
 {% set previousPost = pagelist | getPreviousCollectionItem(page) %}
 {% set nextPost = pagelist | getNextCollectionItem(page) %}
@@ -40,8 +40,8 @@
 <a href="{{ entry.url }}"><img src="/img/cinnamon-nav-latest-hover.png"/></a>
 {% endif %}
 {% endfor %}
-
 </div>
+<center><p style="background-color:#f0f0f0; width:auto; border-radius:5px;">alt navigation: arrow keys / swiping on touch </p></center>
 <div class="minicomicnav">
 
 </div>
