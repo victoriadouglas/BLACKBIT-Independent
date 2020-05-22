@@ -4,9 +4,6 @@ title: Store
 description: Give me money.
 logo: emojimoney
 backgroundcolor: bae899
-eleventyNavigation:
-  key: Store
-  order: 5
 ---
 
 Coming soon. Coming soon. Coming soon. Coming soon. Coming soon. Coming soon. Coming soon. Coming soon. Coming soon. Coming soon. Coming soon. Coming soon. Coming soon. Coming soon. Coming soon. Coming soon. Coming soon. Coming soon. Coming soon. Coming soon. Coming soon. Coming soon. Coming soon. Coming soon. Coming soon. Coming soon. Coming soon. Coming soon. Coming soon. Coming soon. Coming soon. Coming soon. Coming soon. Coming soon. Coming soon. Coming soon. Coming soon. Coming soon. Coming soon. Coming soon. Coming soon. Coming soon. Coming soon. Coming soon. Coming soon. Coming soon. Coming soon. Coming soon.

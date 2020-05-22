@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 title: Illustr8
-description: Serving serving narratives.
+description: Single serving narratives.
 logo: emojipencils
 backgroundcolor: 878787
 permalink: /illustration/
@@ -51,9 +51,7 @@ sketches:
 </div>
 {% for item in sketches %}
 <div class="grid-item imagediv">
-      <img style="border-radius:5px;-webkit-box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.5);
--moz-box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.5);
-box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.5);" src="/img/sketches/{{ item }}.jpg"/>
+      <img class="imagecard" src="/img/sketches/{{ item }}.jpg"/>
       </div>
 {% endfor %}
 </div>
