@@ -1,4 +1,4 @@
-# blackbit.xyz
+# blackbit.world
 
 Victoria Douglas' personal corner of comics, butts, and art.
 
