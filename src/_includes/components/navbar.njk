@@ -2,33 +2,33 @@
       <div class="navbar" id="mynavbar">
         <div class="logodiv">
           {% if navlogo =="blackbit" %}
-            <h1 class="home"><a href="{{ '/' | url }}">blackbit</a></h1>
+            <h2 class="home"><a href="{{ '/' | url }}">blackbit</a></h1>
           {% elif navlogo =="emoji" %}
-            <h1 class="home"><a href="{{ '/' | url }}">🤬🤬🤬</a></h1>
+            <h2 class="home"><a href="{{ '/' | url }}">🤬🤬🤬</a></h1>
              {% elif navlogo =="emojimoney" %}
-            <h1 class="home"><a href="{{ '/' | url }}">🤑💰🤑</a></h1>
+            <h2 class="home"><a href="{{ '/' | url }}">🤑💰🤑</a></h1>
           {% elif navlogo =="emojiskull" %}
-            <h1 class="home"><a href="{{ '/' | url }}">💀💀💀</a></h1>
+            <h2 class="home"><a href="{{ '/' | url }}">💀💀💀</a></h1>
            {% elif navlogo =="emojianim" %}
-            <h1 class="home"><a href="{{ '/' | url }}">🎥🎥🎥</a></h1>
+            <h2 class="home"><a href="{{ '/' | url }}">🎥🎥🎥</a></h1>
           {% elif navlogo =="emojipencils" %}
-            <h1 class="home"><a href="{{ '/' | url }}">✒️✒️✒️</a></h1>
+            <h2 class="home"><a href="{{ '/' | url }}">✒️✒️✒️</a></h1>
           {% elif navlogo =="emojicats" %}
-            <h1 class="home"><a href="{{ '/' | url }}">😾😾😾</a></h1>
+            <h2 class="home"><a href="{{ '/' | url }}">😾😾😾</a></h1>
           {% elif navlogo =="skull" %}
             <a href="{{ '/' | url }}"><img class="navlogo" src="/img/logoskull.svg" alt="skull logo" height="50px;"/></a>
           {% elif navlogo =="emojipeach" %}
-            <h1 class="home"><a href="{{ '/' | url }}">🍑🍑🍑</a></h1>
+            <h2 class="home"><a href="{{ '/' | url }}">🍑🍑🍑</a></h1>
           {% elif navlogo =="cinnamon" %}
             <a href="{{ '/' | url }}"><img class="navlogo" src="/img/cinnamonnav.svg" alt="cinnamon logo" height="60px;"/></a>
           {% else %}
-           <h1 class="home"><a href="{{ '/' | url }}">blackbit</a></h1>
+           <h2 class="home"><a href="{{ '/' | url }}">blackbit</a></h1>
           {% endif %}
         </div>
 
       {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
       <div class="navstuff" id="navcollapse">
-      {%- for entry in collections.all | eleventyNavigation %}<a class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}" href="{{ entry.url | url }}">.{{ entry.title }}</a>{%- endfor %}<a target="blank" class="nav-item" href="https://gumroad.com/blackbit">.store</a>
+      {%- for entry in collections.all | eleventyNavigation %}<a class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}" href="{{ entry.url | url }}">.{{ entry.title }}</a>{%- endfor %}
   <a name="instagram link" class="nav-item" href="https://www.instagram.com/blackbit.exe/"><sub><i class="fab fa-instagram"></i></sub></a>
       <a name="vimeo link" class="nav-item" href="https://vimeo.com/blackbit"><sub><i class="fab fa-vimeo"></i></i></sub></a>
       <a name="github link" class="nav-item" href="https://github.com/victoriadouglas/BLACKBIT-Independent"><sub><i class="fab fa-github-alt"></i></i></sub></a>

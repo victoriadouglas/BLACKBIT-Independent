@@ -22,8 +22,9 @@
 }
 
 h1 {
-  font-family: Blackout, Arial, Helvetica, sans-serif;
-  font-weight: 400;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  font-style: italic;
   font-size: 4rem;
   letter-spacing: auto;
   padding-bottom: 0;
@@ -365,7 +366,7 @@ main {
 
 .illustrationbutton {
   display: block;
-  margin: 100px auto;
+  margin: 30px auto 30px;
   background: none;
   h1 {
     color: $line-color;
