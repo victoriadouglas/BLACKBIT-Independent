@@ -1,0 +1,44 @@
+---
+layout: layouts/base.njk
+navbarcolor: rgb(240, 240, 240)
+backgroundcolor: f2f2f2
+navlogo: emojiknight
+---
+<main>
+
+{% set comictitle = "/img/logo/templartitle.jpg" %}
+{% set pagelist = collections.templar %}
+
+
+<!-- Title 
+{% include "components/comictitle.njk" %}
+-->
+
+
+<!-- Comic Page -->
+<div class="comicpage" id="comicpage">
+<img src="/img/{{ title }}/{{ chapter }}-{{ pagenumber }}.jpeg"/>
+</div>
+
+
+<div class="container">
+<!-- Comic Nav -->
+{% include "components/comicsnav.njk" %}
+
+
+<!-- Journal -->
+<div class="mangapage" style="grid-template-columns: 1fr 5fr;" >
+<div class="mangahalftone mangapanel"></div>
+<div class="mangacontent mangapaper mangapanel">
+<h1>{{ title }} {{chapter}}.{{ pagenumber }}</h1>
+<p class="datedisplay"> <small>{{ date }}</small> </p>
+{{ content | safe }}
+</div>
+</div>
+
+<!-- Disqus Comments -->
+{% include "components/disquscomments.njk" %}
+</main>
+
+<!-- Hammer JS Scripts -->
+{% include "components/hammerjs.njk" %}

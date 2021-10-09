@@ -12,11 +12,7 @@ Follow me on:
 
 ## Overview
 
-I am an artist and illustrator from Columbus, Ohio. I've also been running adjacent to web development for a long time, but the imposter syndrome is **significant**. Previous versions of this site ran on Jekyll, but the current iteration switched to Eleventy and I am much happier. I love the freedom it gives me to template my own way, even though I'm sure there are better ways to do it.
-
-My goals with this site have been to host webcomics simply, effectively, and tailored to my use. I create a lot of short run, original comics, and wanted a way to style and post new comics quickly. Eleventy's new updates to collection pagination made that a lot easier for me.
-
-Working on my own website again has stretched me a lot, but I'm happy with what I've been able to carve out. If you have any advice or comments, feel free to drop them here for my own sake. I'm always looking to improve.
+Personal Site for Comics and Illustration. Small Blog.
 
 ## Tools and Dependencies
 
@@ -51,3 +47,7 @@ Index Banners: 960x300px JPG
 Blog Headers: up to 960px wide
 Illustration JPGS: 800px wide
 Comic Header: 960x400px;
+
+## Getting Started
+
+A reminder for dumb me, clone the repo, SHIFT + Right Click in the folder to open Powershell in the site, then run NPM START. Site will be previewed at http://localhost:8080/

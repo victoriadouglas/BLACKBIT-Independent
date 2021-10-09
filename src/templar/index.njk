@@ -1,0 +1,11 @@
+---
+layout: layouts/page.njk
+title: Templar
+navlogo: emojiknights
+titleimage: /img/logo/templartitle.jpg
+backgroundcolor: f2f2f2
+---
+
+{% set postslist = collections.templar %}
+{% set postslistCounter = collections.templar | length %}
+{% include "components/postslist.njk" %}
