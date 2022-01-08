@@ -1,7 +1,7 @@
 ---
 title: Top Video Games I played in 2021
 description: 
-date: 2022-06-1
+date: 2022-01-06
 tags: life
 layout: layouts/post.njk
 ---
