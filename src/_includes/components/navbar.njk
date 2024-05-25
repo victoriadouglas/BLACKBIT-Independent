@@ -29,7 +29,6 @@
       {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
       <div class="navstuff" id="navcollapse">
       {%- for entry in collections.all | eleventyNavigation %}<a class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}" href="{{ entry.url | url }}">.{{ entry.title }}</a>{%- endfor %}
- <a class="nav-item" href="https://halftonehospital.com/">.halftone hospital</a>
   <a name="instagram link" class="nav-item" href="https://www.instagram.com/blackbit.exe/"><sub><i class="fab fa-instagram"></i></sub></a>
       <a name="vimeo link" class="nav-item" href="https://vimeo.com/blackbit"><sub><i class="fab fa-vimeo"></i></i></sub></a>
       <a name="github link" class="nav-item" href="https://github.com/victoriadouglas/BLACKBIT-Independent"><sub><i class="fab fa-github-alt"></i></i></sub></a>
