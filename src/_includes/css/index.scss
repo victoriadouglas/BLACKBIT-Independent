@@ -15,6 +15,7 @@ body {
   background-color: $background-color;
 }
 
+@import "skeleton.scss";
 @import "defaults.scss";
 @import "global.scss";
 @import "components.scss";

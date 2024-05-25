@@ -16,14 +16,16 @@
   padding: 10px;
 }
 .home {
-  padding: 0 1rem;
   float: left;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 600;
+  font-family: "Kode Mono", monospace;
+  font-weight: 700;
   color: $line-color;
-  margin: 0.6rem 0; /* 16px /16 */
+  margin: 2rem 0; /* 16px /16 */
   font-size: 1.45em; /* 16px /16 */
   text-decoration: none;
+  a {
+    padding: 1rem 2rem;
+  }
 }
 .home :link:not(:hover) {
   text-decoration: none;
@@ -51,12 +53,11 @@
 .nav-item {
   text-decoration: none;
   display: inline-block;
-  padding: 1rem 0.7rem;
+  padding: 2rem 3rem;
   color: $base-text;
   background: none;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 300;
-  font-style: italic;
+  font-family: "Kode Mono", monospace;
+  font-weight: 700;
   text-transform: lowercase;
 }
 
@@ -77,6 +78,25 @@
 
 .navstuff i {
   font-size: 1.5rem;
+}
+
+.logotitle {
+  max-height: 100vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* -------------------- Highlight Sect -------------------- */
+
+.highlight {
+  background-color: #222222;
+  padding: 100px 0 100px 0;
+  margin: 30px 0;
+}
+
+.highlight h1,.highlight h2,.highlight h3,.highlight h4,.highlight h5,.highlight p {
+  color: $background-color;
 }
 
 /* -------------------- Navbar responsiveness -------------------- */
@@ -169,7 +189,7 @@
   font-size: 2rem;
 }
 
-/* -------------------- Manga Panel Utilities -------------------- */
+/* -------------------- Manga Panel Utilities GOD FUCK THIS SHIT -------------------- */
 
 .mangapage {
   max-width: 95vw;
@@ -374,6 +394,7 @@
     text-decoration: none;
     background: none;
     padding: 0;
+    
     i {
       color: $background-color;
       padding: 0.5rem;
@@ -410,6 +431,11 @@
   text-align: right;
 }
 
+.breaker {
+  height: 5vw;
+  border-left: dashed #222222 2px;
+}
+
 /* -------------------- News Banner Widget -------------------- */
 
 .newswidget {
@@ -437,4 +463,138 @@
   background-color: $background-color;
   padding: 20px;
   margin-bottom: 150px;
+}
+
+/* -------------------- Quick Links -------------------- */
+
+.quicklinks a {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin: 25px 0 25px 0;
+  padding: 40px;
+  font-size: 3rem;
+  font-family: "Kode Mono", monospace;
+  font-weight: 700;
+  border:#222222 solid 5px;
+  background-color: $accent-one;
+  filter: drop-shadow(10px 10px 0px #222222);
+  border-radius: 10px;
+  transition-duration: 200ms;
+}
+
+.quicklinks a:hover{
+  font-weight: 700;
+  border:#222222 solid 5px;
+  background-color: #222222;
+  color: white;
+  filter: drop-shadow(30px 30px 0px #222222);
+}
+
+.quickbutton {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin: 25px 0 25px 0;
+  padding: 40px;
+  font-size: 3rem;
+  font-family: "Kode Mono", monospace;
+  font-weight: 700;
+  border:#222222 solid 5px;
+  background-color: $accent-one;
+  filter: drop-shadow(10px 10px 0px #222222);
+  border-radius: 10px;
+  transition-duration: 200ms;
+}
+
+.quickbutton:hover{
+  font-weight: 700;
+  border:#222222 solid 5px;
+  background-color: #222222;
+  color: white;
+  filter: drop-shadow(30px 30px 0px #222222);
+}
+
+.quicksmall {
+  font-size: 2rem;
+  width: 50%;
+  padding: 20px;
+}
+
+
+.quicklinks {
+  padding-bottom: 200px;
+}
+
+
+/* -------------------- Paneling 2.0 -------------------- */
+
+.bordered {
+  border-left: solid #222222 50px;
+  padding-left: 50px;
+}
+
+.paneled {
+  border:#222222 solid 5px;
+  background-color: $background-color;
+  filter: drop-shadow(10px 10px 0px #222222);
+  padding:20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.postpanel{
+background-color: $accent-one;
+border:#222222 solid 5px;
+border-radius: 10px;
+padding: 20px;
+font-family: "Kode Mono", monospace;
+font-weight: 700;
+filter: drop-shadow(5px 5px 0px #222222);
+transition-duration: 200ms;
+margin-right: 20px;
+font-size: 2rem;
+}
+
+.postpanel:hover {
+  font-weight: 700;
+  border:#222222 solid 5px;
+  background-color: #222222;
+  color: white;
+  filter: drop-shadow(15px 15px 0px #222222);
+}
+
+/* -------------------- Buttons 2.0 -------------------- */
+
+.button {
+  font-family: "Kode Mono", monospace;
+  font-weight: 700;
+  border:#222222 solid 3px;
+  background-color: $background-color;
+  filter: drop-shadow(3px 3px 0px #222222);
+  transition-duration: 200ms;
+}
+
+.button:hover {
+  background-color: #222222;
+  color: white;
+  filter: drop-shadow(8px 8px 0px #222222);
+  border-color: #222222;
+}
+
+.button.button-primary {
+  font-family: "Kode Mono", monospace;
+  font-weight: 700;
+  border:#222222 solid 3px;
+  background-color: $accent-one;
+  filter: drop-shadow(3px 3px 0px #222222);
+  transition-duration: 200ms;
+  color:#222222;
+}
+
+.button.button-primary:hover {
+  background-color: #222222;
+  color: white;
+  filter: drop-shadow(8px 8px 0px #222222);
+  border-color: #222222;
 }
