@@ -6,7 +6,7 @@ description: independent comics & illustration by victoria douglas
 navlogo: emojiskull
 ---
 
-<div style="margin-top: -100px;">
+<div class="containerstart">
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxx Intro xxxxxxxxxxxxxxxxxxxxxxxxxx -->
 
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxx Comics xxxxxxxxxxxxxxxxxxxxxxxxxx -->
@@ -44,7 +44,7 @@ navlogo: emojiskull
 
 <div class="row">
 <div class="one-half column">
-<img style="max-width:600px; float:right;margin-right:-5vw;" src="/img/poisonpill.webp"/>
+<img class="bookfloat" src="/img/poisonpill.webp"/>
 </div>
 <div class="one-half column">
 
@@ -61,7 +61,7 @@ navlogo: emojiskull
 <div class="row">
         <div class="one-half column" style="padding:0;" >
 
-        <img style="max-width:600px; float:right;margin-right:-5vw;" src="/img/bibliobook.webp"/>
+        <img class="bookfloat" src="/img/bibliobook.webp"/>
         </div>
 
 <div class="one-half column">
@@ -79,7 +79,7 @@ navlogo: emojiskull
 
 <div class="row">
 <div class="one-half column">
-<img style="max-width:600px; float:right;margin-right:-5vw;" src="/img/cinnamonbook.webp"/>
+<img class="bookfloat" src="/img/cinnamonbook.webp"/>
 </div>
 <div class="one-half column">
 <h2 style="margin-bottom:0px;">cinnamon (trade paperback)</h2>
@@ -98,14 +98,11 @@ navlogo: emojiskull
 
 
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxx Recent Blogs xxxxxxxxxxxxxxxxxxxxxxxxxx -->
- <img class="paneled" style="padding-top:50px;" src="/img/sword.png"/>
+ <img class="" style="padding-top:50px;" src="/img/sword.png"/>
 
 
-<div class="row">
-        <div class="two columns">
-                <div style="width:100%; height:300px;" ></div>
-        </div>
-        <div class="bordered ten columns">
+
+        <div class="bordered">
               <h2 class="paneled">Latest Blogs</h2>
 {% set postslist = collections.posts | head(-5) %}
 {% set postslistCounter = collections.posts | length %}
@@ -113,7 +110,6 @@ navlogo: emojiskull
 <p>More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>
                 
         </div>
-</div>
 
 
 

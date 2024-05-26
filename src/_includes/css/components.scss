@@ -11,6 +11,7 @@
   width: 100%;
   margin: 0 auto;
   overflow: hidden;
+  z-index: 9999;
 }
 .navlogo {
   padding: 10px;
@@ -55,10 +56,11 @@
   display: inline-block;
   padding: 2rem 3rem;
   color: $base-text;
-  background: none;
+  background: white;
   font-family: "Kode Mono", monospace;
   font-weight: 700;
   text-transform: lowercase;
+  z-index: 9999;
 }
 
 .nav-item:hover {
@@ -105,7 +107,7 @@
   display: none;
   color: $line-color;
   background: none;
-  padding: 0.5rem 0.7rem;
+  padding: 1.5rem 2rem;
 }
 
 .navbar .icon:hover {
@@ -141,6 +143,7 @@
     position: absolute;
     display: inline-block;
     right: 20px;
+    z-index: 9999;
   }
   .navstuff.responsive .icon {
     position: absolute;
@@ -466,14 +469,13 @@
 }
 
 /* -------------------- Quick Links -------------------- */
-
-.quicklinks a {
+.quickbutton, .quicklinks a {
   display: inline-block;
   width: 100%;
   text-align: center;
   margin: 25px 0 25px 0;
-  padding: 40px;
-  font-size: 3rem;
+  padding: 10px;
+  font-size: 1.5rem;
   font-family: "Kode Mono", monospace;
   font-weight: 700;
   border:#222222 solid 5px;
@@ -483,31 +485,7 @@
   transition-duration: 200ms;
 }
 
-.quicklinks a:hover{
-  font-weight: 700;
-  border:#222222 solid 5px;
-  background-color: #222222;
-  color: white;
-  filter: drop-shadow(30px 30px 0px #222222);
-}
-
-.quickbutton {
-  display: inline-block;
-  width: 100%;
-  text-align: center;
-  margin: 25px 0 25px 0;
-  padding: 40px;
-  font-size: 3rem;
-  font-family: "Kode Mono", monospace;
-  font-weight: 700;
-  border:#222222 solid 5px;
-  background-color: $accent-one;
-  filter: drop-shadow(10px 10px 0px #222222);
-  border-radius: 10px;
-  transition-duration: 200ms;
-}
-
-.quickbutton:hover{
+.quickbutton:hover, .quicklinks a:hover{
   font-weight: 700;
   border:#222222 solid 5px;
   background-color: #222222;
@@ -516,11 +494,42 @@
 }
 
 .quicksmall {
+  font-size: 1.5rem;
+  width: 80%;
+  padding: 5px;
+}
+
+@media (min-width: 768px) {
+  .quickbutton, .quicklinks a {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin: 25px 0 25px 0;
+    padding: 40px;
+    font-size: 3rem;
+    font-family: "Kode Mono", monospace;
+    font-weight: 700;
+    border:#222222 solid 5px;
+    background-color: $accent-one;
+    filter: drop-shadow(10px 10px 0px #222222);
+    border-radius: 10px;
+    transition-duration: 200ms;
+  }
+  
+  .quickbutton:hover, .quicklinks a:hover{
+    font-weight: 700;
+    border:#222222 solid 5px;
+    background-color: #222222;
+    color: white;
+    filter: drop-shadow(30px 30px 0px #222222);
+  }
+
+.quicksmall {
   font-size: 2rem;
   width: 50%;
   padding: 20px;
 }
-
+}
 
 .quicklinks {
   padding-bottom: 200px;
@@ -528,9 +537,8 @@
 
 
 /* -------------------- Paneling 2.0 -------------------- */
-
 .bordered {
-  border-left: solid #222222 50px;
+  border-left: solid #222222 10px;
   padding-left: 50px;
 }
 
@@ -543,17 +551,21 @@
   margin-top: 20px;
 }
 
+.containerstart {
+  margin-top: 0;
+}
+
 .postpanel{
 background-color: $accent-one;
 border:#222222 solid 5px;
 border-radius: 10px;
-padding: 20px;
+padding: 5px;
 font-family: "Kode Mono", monospace;
 font-weight: 700;
 filter: drop-shadow(5px 5px 0px #222222);
 transition-duration: 200ms;
 margin-right: 20px;
-font-size: 2rem;
+font-size: 1.3rem;
 }
 
 .postpanel:hover {
@@ -564,7 +576,48 @@ font-size: 2rem;
   filter: drop-shadow(15px 15px 0px #222222);
 }
 
+
+.bookfloat {
+padding-top: 30px;
+}
+
+@media (min-width: 768px) {
+  .containerstart {
+    margin-top: -10vw;
+  }
+.bordered {
+  border-left: solid #222222 50px;
+  padding-left: 50px;
+}
+.postpanel{
+  background-color: $accent-one;
+  border:#222222 solid 5px;
+  border-radius: 10px;
+  padding: 20px;
+  font-family: "Kode Mono", monospace;
+  font-weight: 700;
+  filter: drop-shadow(5px 5px 0px #222222);
+  transition-duration: 200ms;
+  margin-right: 20px;
+  font-size: 2rem;
+  }
+  
+  .postpanel:hover {
+    font-weight: 700;
+    border:#222222 solid 5px;
+    background-color: #222222;
+    color: white;
+    filter: drop-shadow(15px 15px 0px #222222);
+  }
+
+  .bookfloat {
+    max-width:600px; 
+    float:right;
+    margin-right:-5vw;
+  }
+}
 /* -------------------- Buttons 2.0 -------------------- */
+
 
 .button {
   font-family: "Kode Mono", monospace;
