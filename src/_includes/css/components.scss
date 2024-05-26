@@ -526,7 +526,7 @@
 
 .quicksmall {
   font-size: 2rem;
-  width: 50%;
+  width: auto;
   padding: 20px;
 }
 }
@@ -581,7 +581,20 @@ font-size: 1.3rem;
 padding-top: 30px;
 }
 
+.fixCTA {
+  display:none;
+}
+
 @media (min-width: 768px) {
+
+  .fixCTA {
+    display:block;
+    z-index: 9999;
+    position:fixed;
+    bottom: 10px;
+    right:20px;
+  }
+
   .containerstart {
     margin-top: -10vw;
   }
