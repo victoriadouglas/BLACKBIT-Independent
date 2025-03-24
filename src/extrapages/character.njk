@@ -1,0 +1,241 @@
+---
+navmoji: 🙅🙆💁
+backgroundcolor: #e6e6e6
+permalink: /charactergen/
+---
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+<div class="wrapper">
+  <h1>Character Design Generator</h1>
+  <button onClick="javascript:location.reload(true)">Reroll</button>
+  <p id="result"></p>
+</div>
+
+<style>
+body {background-color: #e6e6e6;}
+.wrapper {
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+}
+.wrapper h1, a, p, button {
+  margin: 40 auto;
+  text-transform: uppercase;
+  font-family: "Courier Prime", monospace;
+  font-weight: 600;
+}
+.wrapper p {
+  font-size:48px;
+  font-weight: 800;
+}
+.wrapper button {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-size: 32px;
+  line-height: 20px;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 14px 24px;
+  border: none;
+  transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
+  background: linear-gradient(to right, rgb(230, 30, 77) 0%, rgb(227, 28, 95) 50%, rgb(215, 4, 102) 100%);
+  color: #fff;          
+}
+</style>
+
+<script>
+// Booleans
+
+var adjCheck = true;
+var sizeCheck = true;
+var ageCheck = true;
+var jobCheck = true;
+var propCheck = true;
+
+// Chances
+var adjChance = 4;
+var sizeChance = 5;
+var ageChance = 5;
+var jobChance = 7;
+var propChance = 4;
+
+
+// Word Lists
+
+const adjList = [
+  "quiet", 
+  "slightly ugly", 
+  "loudmouthed", 
+  "autistic", 
+  "reserved", 
+  "androgynous",
+  "angry"
+]
+
+const sizeList = [
+  "tall", 
+  "short", 
+  "athletic", 
+  "rotund", 
+  "intimidating", 
+  "average-looking",
+  "disabled",
+  "lanky"
+]
+
+const ageList = [
+  "young", 
+  "mid-30's", 
+  "retired", 
+  "ancient", 
+  "teenage", 
+  "old",
+  "adult",
+  "timeless"
+]
+
+
+const nationList = [
+  "man", 
+  "woman", 
+  "person", 
+  "android", 
+  "half elf",
+  "ghost",
+  "demon",
+  "alien"
+]
+
+const jobList = [
+  "a courier", 
+  "a businessman", 
+  "a mechanic", 
+  "a barbarian", 
+  "a politician",
+  "a doctor",
+  "a researcher",
+  "a farmer",
+  "a craftsman",
+  "an artisan",
+  "a socialite",
+  "a member of royalty",
+  "a librarian",
+  "a freeloader",
+  "a warrior",
+  "a soldier",
+  "a stoner",
+  "a deliveryman",
+  "a chef",
+  "a receptionist"
+]
+
+const propList = [
+  "a chip on their shoulder",
+  "a large sword",
+  "an umbrella",
+  "a pencil tucked behind their ear",
+  "a notebook",
+  "a secret",
+  "a bad attitude",
+  "a pair of wings",
+  "heterochromia",
+  "two pairs of wings",
+  "digitigrade legs",
+  "a big facial scar",
+  "a missing limb",
+  "a traumatic past"
+]
+
+// Random Chances
+
+if (Math.floor(Math.random() * 10)+1 < adjChance) {
+  var adjCheck = true;
+} else {
+  var adjCheck = false;
+}
+
+if (Math.floor(Math.random() * 10)+1 < sizeChance) {
+  var sizeCheck = true;
+} else {
+  var sizeCheck = false;
+}
+
+if (Math.floor(Math.random() * 10)+1 < ageChance) {
+  var ageCheck = true;
+} else {
+  var ageCheck = false;
+}
+
+if (Math.floor(Math.random() * 10)+1 < jobChance) {
+  var jobCheck = true;
+} else {
+  var jobCheck = false;
+}
+
+if (Math.floor(Math.random() * 10)+1 < propChance) {
+  var propCheck = true;
+} else {
+  var propCheck = false;
+}
+
+
+// All the math to set final variables on Boolean True
+
+let adjRandInt = Math.floor(Math.random() * (adjList.length - 1));
+var adj = `TEST`;
+if (adjCheck) {
+  var adj = ` `+adjList[adjRandInt];
+} else {
+  var adj = ``;
+}
+
+let sizeRandInt = Math.floor(Math.random() * (sizeList.length - 1));
+var size = `TEST`;
+if (sizeCheck) {
+  var size = ` `+sizeList[sizeRandInt];
+} else {
+  var size = ``;
+}
+
+let ageRandInt = Math.floor(Math.random() * (ageList.length - 1));
+var age = `TEST`;
+if (ageCheck) {
+  var age = ` `+ageList[ageRandInt];
+} else {
+  var age = ``;
+}
+
+let nationRandInt = Math.floor(Math.random() * (nationList.length - 1));
+let nation = ` `+nationList[nationRandInt];
+
+let jobRandInt = Math.floor(Math.random() * (jobList.length - 1));
+var job = `TEST`;
+if (jobCheck) {
+  var job = ` who is `+jobList[jobRandInt];
+} else {
+  var job = ``;
+}
+
+let propRandInt = Math.floor(Math.random() * (propList.length - 1));
+var prop = `TEST`;
+if (propCheck) {
+  var prop = ` with `+propList[propRandInt];
+} else {
+  var prop = ``;
+}
+
+if (jobCheck || propCheck) {
+  var comma = `,`;
+} else {
+  var comma = ``;
+}
+
+// Set Text Box to Final Result
+
+let textbox = document.getElementById("result").innerHTML = `A ${adj}${size}${age}${nation}${comma}${job}${prop}`;
+</script>
