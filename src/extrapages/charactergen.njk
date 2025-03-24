@@ -56,14 +56,14 @@ body {background-color: #e6e6e6;}
 <script>
 // Booleans
 
-var adjCheck = true;
-var sizeCheck = true;
-var ageCheck = true;
-var jobCheck = true;
-var propCheck = true;
+var adjCheck = false;
+var sizeCheck = false;
+var ageCheck = false;
+var jobCheck = false;
+var propCheck = false;
 
 // Chances
-var adjChance = 4;
+var adjChance = 5;
 var sizeChance = 5;
 var ageChance = 5;
 var jobChance = 7;
@@ -76,9 +76,23 @@ const adjList = [
   "quiet", 
   "slightly ugly", 
   "loudmouthed", 
-  "autistic", 
+  "powerful", 
   "reserved", 
   "androgynous",
+  "unfiltered",
+  "wise",
+  "vain",
+  "easy-going",
+  "hard-working",
+  "lazy",
+  "chatty",
+  "gothic",
+  "edgy",
+  "punk",
+  "professional",
+  "selfish",
+  "brave",
+  "cowardly",
   "angry"
 ]
 
@@ -86,10 +100,14 @@ const sizeList = [
   "tall", 
   "short", 
   "athletic", 
-  "rotund", 
+  "overweight",
+  "rotund",
   "intimidating", 
   "average-looking",
   "disabled",
+  "bald",
+  "beautiful",
+  "skinny",
   "lanky"
 ]
 
@@ -101,16 +119,21 @@ const ageList = [
   "teenage", 
   "old",
   "adult",
+  "immortal",
   "timeless"
 ]
 
 
 const nationList = [
   "man", 
-  "woman", 
+  "woman",
+  "grandparent",
+  "sociopath",
   "person", 
   "android", 
-  "half elf",
+  "twink",
+  "anthro",
+  "bear",
   "ghost",
   "demon",
   "alien"
@@ -127,6 +150,15 @@ const jobList = [
   "a farmer",
   "a craftsman",
   "an artisan",
+  "a custodian",
+  "a CEO",
+  "a pilot",
+  "a driver",
+  "a taxi driver",
+  "a racer",
+  "a lawyer",
+  "a revolutionary",
+  "a middle manager",
   "a socialite",
   "a member of royalty",
   "a librarian",
@@ -154,35 +186,54 @@ const propList = [
   "a big facial scar",
   "a missing limb",
   "a traumatic past"
+  "one eye",
+  "a peg leg",
+  "a powerful aura",
+  "the best legs you've ever seen",
+  "freckles",
+  "nothing going for them",
+  "a defeatist attitude",
+  "a mountain of debt",
+  "a companion pet",
+  "a bird on their shoulder",
+  "a package to protect",
+  "a gun",
+  "too much confidence"
 ]
 
 // Random Chances
 
-if (Math.floor(Math.random() * 10)+1 < adjChance) {
+let adjRandChance = Math.floor(Math.random() * 10)+1;
+let sizeRandChance = Math.floor(Math.random() * 10)+1;
+let ageRandChance = Math.floor(Math.random() * 10)+1;
+let jobRandChance = Math.floor(Math.random() * 10)+1;
+let propRandChance = Math.floor(Math.random() * 10)+1;
+
+if (adjRandChance < adjChance) {
   var adjCheck = true;
 } else {
   var adjCheck = false;
 }
 
-if (Math.floor(Math.random() * 10)+1 < sizeChance) {
+if (sizeRandChance < sizeChance) {
   var sizeCheck = true;
 } else {
   var sizeCheck = false;
 }
 
-if (Math.floor(Math.random() * 10)+1 < ageChance) {
+if (ageRandChance < ageChance) {
   var ageCheck = true;
 } else {
   var ageCheck = false;
 }
 
-if (Math.floor(Math.random() * 10)+1 < jobChance) {
+if (jobRandChance < jobChance) {
   var jobCheck = true;
 } else {
   var jobCheck = false;
 }
 
-if (Math.floor(Math.random() * 10)+1 < propChance) {
+if (propRandChance < propChance) {
   var propCheck = true;
 } else {
   var propCheck = false;
@@ -242,5 +293,5 @@ if (jobCheck || propCheck) {
 
 // Set Text Box to Final Result
 
-let textbox = document.getElementById("result").innerHTML = `A ${adj}${size}${age}${nation}${comma}${job}${prop}`;
+let textbox = document.getElementById("result").innerHTML = `The ${adj}${size}${age}${nation}${comma}${job}${prop}`;
 </script>
