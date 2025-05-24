@@ -91,13 +91,16 @@
 /* -------------------- Comics Nav -------------------- */
 
 .comicnav {
-  padding: 20px 0;
-  margin: 10px auto;
+  padding: 20px;
+  margin: 10px auto 20px;
+  border: solid black 8px;
+  filter: drop-shadow(10px 10px 0px #000000);
   position: relative;
-  width: 960px;
+  border-radius: 20px;
+  width: 700px;
   max-width: 90vw;
   display: grid;
-  grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   justify-items: center;
   align-items: center;
   a {
@@ -117,12 +120,24 @@
   justify-items: center;
 
   select {
-    width: 200px;
+    width: 160px;
     max-width: 90vw;
     padding: 0.5rem;
     margin-bottom: 0.5rem;
   }
 }
+
+.navButton{
+  transition: 0.2s;
+  transform: scale(1) rotate(0deg);
+}
+
+.navButton:hover{
+  transition: 0.2s;
+  transform: scale(1.2) rotate(5deg);
+}
+
+
 
 /* -------------------- Footer -------------------- */
 
@@ -423,9 +438,9 @@ padding-top: 30px;
 .button {
   font-family: "Jersey15", monospace;
   font-weight: 700;
-  border:#222222 solid 1rem;
+  border:black solid 1rem;
   background-color: $accent-one;
-  filter: drop-shadow(3px 3px 0px #222222);
+  filter: drop-shadow(3px 3px 0px black);
   transition-duration: 200ms;
   font-size: 4rem;
   padding: 3rem;
@@ -435,10 +450,10 @@ padding-top: 30px;
 }
 
 .button:hover {
-  background-color: #222222;
+  background-color: black;
   color: white;
-  filter: drop-shadow(8px 8px 0px #222222);
-  border-color: #222222;
+  filter: drop-shadow(8px 8px 0px black);
+  border-color: black;
 }
 
 .button.button-primary {
@@ -593,7 +608,7 @@ padding-top: 30px;
   margin: 10px;
   padding: 10px;
   background-color: $accent-one;
-  filter: drop-shadow(.5rem .5rem 0px #222222);
+  filter: drop-shadow(.5rem .5rem 0px #000000);
   transition-duration: 200ms;
   transform: scale(1) rotate(0deg);
 }
@@ -603,7 +618,7 @@ padding-top: 30px;
   height: 110%;
   background-color: #222222;
   color: white;
-  filter: drop-shadow(1rem 1rem 0px #222222);
+  filter: drop-shadow(1rem 1rem 0px #000000);
   border-color: #222222;
   transform: scale(1.2) rotate(5deg);
 }

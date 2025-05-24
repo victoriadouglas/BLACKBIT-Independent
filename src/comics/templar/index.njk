@@ -1,12 +1,7 @@
 ---
-layout: layouts/page.njk
+layout: layouts/comicArchive.njk
 title: Templar Vitae
+slugTitle: templar
 titleimage: /img/comics/templar/logo.jpg
 comicDescription: Real Shit.
 ---
-<div class="container">
-{% set pagelist = collections.templar | reverse %}
-{% set pagelistCounter = collections.templar | length %}
-<p>{{ comicDescription }}</p>
-{% include "components/comicslist.njk" %}
-</div>

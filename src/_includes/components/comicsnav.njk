@@ -6,16 +6,16 @@
 
 {% for entry in pagelist | reverse | head(-1) %}
 {% if page.url == entry.url %}
-<img src="/img/cinnamon-nav-first-disabled.png"/>
+<img src="/img/ui/nav-first-disabled.png"/>
 {% else %}
-<a href="{{ entry.url }}"><img src="/img/cinnamon-nav-first-hover.png"/></a>
+<a class="navButton" href="{{ entry.url }}"><img src="/img/ui/nav-first.png"/></a>
 {% endif %}
 {% endfor %}
 
 {% if previousPost %}
-<a id="prevbutton" href="{{ previousPost.url }}"><img src="/img/cinnamon-nav-back-hover.png"/></a>
+<a id="prevbutton" class="navButton" href="{{ previousPost.url }}"><img src="/img/ui/nav-back.png"/></a>
 {% else %}
-<img src="/img/cinnamon-nav-back-disabled.png"/>
+<img src="/img/ui/nav-back-disabled.png"/>
 {% endif %}
 
 <div class="minicomicnav">
@@ -28,16 +28,16 @@
 </div>
 
 {% if nextPost %}
-<a id="nextbutton" href="{{ nextPost.url }}"><img src="/img/cinnamon-nav-forward-hover.png"/></a>
+<a id="nextbutton" class="navButton" href="{{ nextPost.url }}"><img src="/img/ui/nav-forward.png"/></a>
 {% else %}
-<img src="/img/cinnamon-nav-forward-disabled.png"/>
+<img src="/img/ui/nav-forward-disabled.png"/>
 {% endif %}
 
 {% for entry in pagelist | head(-1) %}
 {% if page.url == entry.url %}
-<img src="/img/cinnamon-nav-latest-disabled.png"/>
+<img src="/img/ui/nav-last-disabled.png"/>
 {% else %}
-<a href="{{ entry.url }}"><img src="/img/cinnamon-nav-latest-hover.png"/></a>
+<a class="navButton" href="{{ entry.url }}"><img src="/img/ui/nav-last.png"/></a>
 {% endif %}
 {% endfor %}
 </div>
