@@ -21,28 +21,70 @@
   src: url("/webfonts/GEIST_RND-webfont.woff");
 }
 
+@font-face {
+  font-family: "Jersey15";
+  src: url("/webfonts/Jersey15-Regular.ttf");
+}
 
+@font-face {
+  font-family: "IBM BIOS";
+  src: url("/webfonts/Px437_IBM_BIOS.ttf");
+}
+
+@font-face {
+  font-family: "IBM BIOS-2X";
+  src: url("/webfonts/Px437_IBM_BIOS-2X.ttf");
+}
+
+@font-face {
+  font-family: "IBM BIOS-2Y";
+  src: url("/webfonts/Px437_IBM_BIOS-2Y.ttf");
+}
+
+@font-face {
+  font-family: "IBM Model30";
+  src: url("/webfonts/Px437_IBM_Model30r0.ttf");
+}
+Px437_IBM_Model30r0
+
+p {
+  font-size: 1.6rem;
+}
 
 h1 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 800;
-  font-style: italic;
-  font-size: 7rem;
+  font-family: "Jersey15", sans-serif;
+  font-size: 12rem;
+  color: white;
+  -webkit-text-stroke-width: 1rem;
+  -webkit-text-stroke-color: black;
+  paint-order: stroke fill;
+  filter: drop-shadow(0.8rem 0.8rem 0px #000000);
+  margin-bottom: 0;
+  line-height: 10rem;
+  padding-bottom: 30px;
+}
+
+.h1Panel {
+  background-color: $accent-two;
+  display: block;
+  width: 100vw;
+padding-top: 20vh;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-family: "Jersey15", sans-serif;
+  font-size: 5rem;
   letter-spacing: auto;
+  line-height: 4rem;
   padding-bottom: 0;
   margin-bottom: 10px;
 }
 
-h2 {
-  font-family: "Jacquard 12", system-ui;
-  font-weight: 400;
-  font-size: 5rem;
-  font-style: normal;
-  line-height: .8;
-}
-
 h3 {
-  font-family: "Jacquard 12", system-ui;
+  font-family: "IBM BIOS", system-ui;
+  font-size: 2rem;
 }
 
 h4 {
@@ -192,7 +234,7 @@ main {
 }
 
 .bigcontainer {
-  max-width: 95vw;
+  max-width: 90vw;
   margin: 0 auto;
   img {
     max-width: 100%;
@@ -200,8 +242,7 @@ main {
 }
 
 .fullcontainer {
-  width: 95;
-  max-width: 98vw;
+  max-width: 85vw;
   margin: 0 auto;
   img {
     max-width: 100%;

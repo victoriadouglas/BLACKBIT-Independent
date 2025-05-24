@@ -103,15 +103,16 @@ pre {
 .postlist {
   list-style: none;
   padding: 0;
+  list-style-type: none;
 }
 .postlist-item {
   counter-increment: start-from -1;
   padding-bottom: 10px;
+  list-style-type: none;
 }
 .postlist-item:before {
   display: inline-block;
   pointer-events: none;
-  content: "" counter(start-from, decimal-leading-zero) ". ";
   line-height: 100%;
   text-align: right;
 }

@@ -36,24 +36,55 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"> 
   </head>
   <body>
-    <div class="footerseating">
-    <div class="notfooter">
     {% include "components/navbar.njk" %}
+    <div class="footerseating">
+    <div class="notfooter menuScaler">
+    
+    
     
     {{ content | safe }}
 
 
   
-    <p class="signature">
-    // victoria douglas 2024 ++
-    </p>
-    {% include "components/accent.njk" %}
+  
 
     <style>
-    {% if navbarcolor %}
-    .navstuff {background-color: {{ navbarcolor }};}
+    {% if accentColor %}
+    .navstuff {background-color: #{{ accentColor }};}
       {% else %}
-      .navstuff {background: none;}
+      .navstuff {background-color: $accent-one;}
+      {% endif %}
+
+    {% if headerImage %}
+    .h1Panel {background-image: url("{{ headerImage }}");}
+      {% elif headerColor %}
+      .h1Panel {background-color: #{{ accentColor }};}
+      {% else %}
+      .h1Panel {background-color: $accent-two;}
+      {% endif %}
+
+    {% if accentColor %}
+    .quickbutton, .quicklinks a {background-color: #{{ accentColor }};}
+      {% else %}
+      .quickbutton, .quicklinks a {background-color: $accent-one;}
+      {% endif %}
+
+    {% if accentColor %}
+    .quickbutton, .quicklinks a {background-color: #{{ accentColor }};}
+      {% else %}
+      .quickbutton, .quicklinks a {background-color: $accent-one;}
+      {% endif %}
+
+    {% if accentColor %}
+    .postpanel{background-color: #{{ accentColor }};}
+      {% else %}
+      .postpanel{background-color: $accent-one;}
+      {% endif %}
+
+    {% if accentColor %}
+    .button{background-color: #{{ accentColor }};}
+      {% else %}
+      .button{background-color: $accent-one;}
       {% endif %}
 
 {% if backgroundimage %}
@@ -64,7 +95,7 @@
     {% if backgroundcolor %}
     body {background-color:#{{ backgroundcolor }};
     {% else %}
-    body {background-color: #f0f0f0;
+    body {background-color: $background-color;}
     {% endif %}
 
     
