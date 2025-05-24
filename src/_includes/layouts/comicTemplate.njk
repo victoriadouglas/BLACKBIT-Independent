@@ -1,0 +1,37 @@
+---
+layout: layouts/base.njk
+---
+
+<main>
+<div class="container">
+<img class="comictitle" src="{{ titleimage }}"/>
+</div>
+
+<!-- Comic Page -->
+<div class="comicpage" id="comicpage">
+<img src="/img/comics/{{ slugTitle }}/{{ chapter }}-{{ pagenumber }}.jpeg"/>
+</div>
+
+{% set pagelist = collections[slugTitle] %}
+
+
+<div class="container">
+<!-- Comic Nav -->
+{% include "components/comicsnav.njk" %}
+
+
+<!-- Journal -->
+<div class="mangapage" style="grid-template-columns: 1fr 5fr;" >
+<div class="mangahalftone mangapanel"></div>
+<div class="mangacontent mangapaper mangapanel">
+<h1>{{ title }} {{chapter}}.{{ pagenumber }}</h1>
+<p class="datedisplay"> <small>{{ date }}</small> </p>
+<div style="min-height:200px;">
+    {{ content | safe }}
+</div>
+</div>
+</div>
+</main>
+
+<!-- Hammer JS Scripts -->
+{% include "components/hammerjs.njk" %}

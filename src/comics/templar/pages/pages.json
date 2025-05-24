@@ -1,0 +1,9 @@
+{
+  "title": "Templar Vitae",
+  "slugTitle": "templar",
+  "layout": "layouts/comicTemplate.njk",
+  "tags": ["templar"],
+  "titleimage": "/img/comics/templar/logo.jpg",
+  "backgroundcolor": "f2f2f2",
+  "collectionKey": "collections.templar"
+}
