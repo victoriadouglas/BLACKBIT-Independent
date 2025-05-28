@@ -78,13 +78,15 @@ h2 {
   font-size: 5rem;
   letter-spacing: auto;
   line-height: 4rem;
-  padding-bottom: 0;
+  padding: 10px;
+  padding-left: 0;
   margin-bottom: 10px;
 }
 
 h3 {
   font-family: "IBM BIOS", system-ui;
   font-size: 2rem;
+  padding: 20px;
 }
 
 h4 {
@@ -464,4 +466,8 @@ main {
     grid-template-columns: 1fr 1.5fr;
     grid-template-rows: 1fr auto;
   }
+}
+
+.bookfloat {
+  top: -50px;
 }

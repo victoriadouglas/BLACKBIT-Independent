@@ -356,10 +356,11 @@
   border:#222222 solid 5px;
   background-color: $background-color;
   filter: drop-shadow(10px 10px 0px #222222);
-  padding:20px;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin: 20px 10px;
   border-radius: 10px;
+  h2, p, .button {
+    margin:20px;
+  }
 }
 
 
@@ -380,7 +381,8 @@ line-height: 3rem;
 
 
 .bookfloat {
-padding-top: -60px;
+top: -100px;
+position: relative;
 }
 
 .fixCTA {
@@ -416,7 +418,7 @@ padding-top: -60px;
   }
 
   .bookfloat {
-    max-width:600px; 
+    max-width:900px; 
     float:right;
     margin-right:-5vw;
   }
@@ -620,4 +622,35 @@ padding-top: -60px;
   left: 55%;
   transform: translate(-50%, 0%);
   z-index: -10;
+}
+
+.squared {
+  max-height: 70vh;
+  margin-top: 10vh;
+}
+
+.plxleft {
+  left:0%;
+  top:0;
+  transform: translate(0, 0%) scale(100%);
+}
+
+@media (min-width: 800px) {
+  .plxleft {
+    left:10%;
+    top:0;
+    transform: translate(0, 0%) scale(100%);
+  }
+}
+
+.plxright {
+  right:0%;
+  top:0;
+  transform: translate(0, 0%) scale(100%);
+}
+
+/* -------------------- Vector Accent Fills -------------------- */
+
+.vectorAccent path {
+  fill: $accent-one;
 }
