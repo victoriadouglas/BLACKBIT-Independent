@@ -141,12 +141,6 @@
 
 /* -------------------- Footer -------------------- */
 
-.footerseating {
-  min-height: 100vh;
-  display: grid;
-  grid-template-rows: 1fr auto;
-}
-
 .footer {
   ul {
     list-style: none;
@@ -365,11 +359,9 @@
   padding:20px;
   margin-bottom: 20px;
   margin-top: 20px;
+  border-radius: 10px;
 }
 
-.containerstart {
-  margin-top: 0;
-}
 
 .postpanel{
 background-color: $accent-one;
@@ -388,7 +380,7 @@ line-height: 3rem;
 
 
 .bookfloat {
-padding-top: 30px;
+padding-top: -60px;
 }
 
 .fixCTA {
@@ -405,9 +397,6 @@ padding-top: 30px;
     right:20px;
   }
 
-  .containerstart {
-    margin-top: -10vw;
-  }
 .bordered {
   border-left: solid #222222 50px;
   padding-left: 50px;
@@ -621,4 +610,14 @@ padding-top: 30px;
   filter: drop-shadow(1rem 1rem 0px #000000);
   border-color: #222222;
   transform: scale(1.2) rotate(5deg);
+}
+
+/* -------------------- Parallax -------------------- */
+
+.plx {
+  position: absolute;
+  max-height: 100vh;
+  left: 55%;
+  transform: translate(-50%, 0%);
+  z-index: -10;
 }
