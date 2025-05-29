@@ -120,7 +120,10 @@ description: independent comics & illustration by victoria douglas
 </div>
 
 <div class="container">
-
+<div class="paneled">
+<h2>( Quick Links )</h2>
+{% include "components/quicklinks.njk" %}
+</div>
 
 
 <div class="bordered paneled">
@@ -139,6 +142,21 @@ description: independent comics & illustration by victoria douglas
 
 <img class="" style="padding-top:50px;" src="/img/sword.png"/>
 
+<div class="bordered paneled">
+<h2>Drop me a line!</h2>
+<form action="https://formspree.io/f/xnnvaqjg" method="POST">
+  <label>
+    Your email: <br>
+    <input type="email" name="email" style="width:90%;">
+  </label>
+  <label>
+    Your message: <br>
+    <textarea style="width:90%;"name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button class="button" type="submit">Send</button>
+</form>
+</div>
 
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxx Bits xxxxxxxxxxxxxxxxxxxxxxxxxx 
 <div style="display:flex">

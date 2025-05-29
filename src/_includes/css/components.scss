@@ -275,8 +275,8 @@
 
 /* -------------------- Quick Links -------------------- */
 .quickbutton, .quicklinks a {
-  display: inline-block;
-  width: 100%;
+  display: block;
+  width: 90%;
   text-align: center;
   margin: 25px 0 25px 0;
   padding: 10px;
@@ -288,6 +288,12 @@
   filter: drop-shadow(10px 10px 0px #222222);
   border-radius: 10px;
   transition-duration: 200ms;
+  h2 {
+    margin: 0;
+  }
+  p {
+    margin: 0;
+  }
 }
 
 .quickbutton:hover, .quicklinks a:hover{
@@ -306,10 +312,10 @@
 
 @media (min-width: 768px) {
   .quickbutton, .quicklinks a {
-    display: inline-block;
-    width: 100%;
+    display: block;
+    width: 90%;
     text-align: center;
-    margin: 25px 0 25px 0;
+    margin: 30px auto;
     padding: 10px;
     font-family: "Jersey15", monospace;
     font-weight: 700;
@@ -320,15 +326,17 @@
     transition-duration: 200ms;
     p {
       max-width: none;
+      margin: 0 !important;
     }
     h2 {
       text-transform: uppercase;
+      margin: 0 !important;
     }
   }
   
   .quickbutton:hover, .quicklinks a:hover{
     font-weight: 700;
-    border:#222222 solid 5px;
+    border:#222222 solid 8px;
     background-color: #222222;
     color: white;
     filter: drop-shadow(30px 30px 0px #222222);
@@ -370,6 +378,7 @@ font-family: "Jersey15", monospace;
 font-weight: 700;
 transition-duration: 200ms;
 line-height: 3rem;
+font-size: 3rem;
 }
 
 .postpanel:hover {
@@ -705,4 +714,30 @@ position: relative;
     padding: 0;
   }
   
+}
+
+/* -------------------- Cards -------------------- */
+
+.verticalcard {
+  img {
+    display: block;
+  }
+}
+
+.horizontalcard {
+  img {
+    display: block;
+  }
+  h2 {
+    padding: 0;
+    margin-top: 20px;
+  }
+  .button {
+    margin: 20px;
+    font-size: 2rem;
+    padding: 20px;
+  }
+  p {
+    margin: 5px 20px;
+  }
 }

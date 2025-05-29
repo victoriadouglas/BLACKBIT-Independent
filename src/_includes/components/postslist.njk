@@ -4,7 +4,7 @@
     <a style="" href="{{ post.url | url }}" class="postlist-link postpanel">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}
     </a>
     
-    
+    <br class="mobilebreak">
     <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
     {% for tag in post.data.tags %}
       {%- if collections.tagList.indexOf(tag) != -1 -%}
