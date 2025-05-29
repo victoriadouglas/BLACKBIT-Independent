@@ -62,58 +62,27 @@
 
     <style>
     {% if accentColor %}
-    .navstuff {background-color: #{{ accentColor }};}
-      {% else %}
-      .navstuff {background-color: $accent-one;}
-      {% endif %}
-
-    {% if accentColor %}
-    .vectorAccent path{fill: #{{ accentColor }};}
-      {% else %}
-      .vectorAccent path{fill: $accent-one;}
-      {% endif %}
+      .navstuff {background-color: #{{ accentColor }};}
+      .logoStyling {filter: drop-shadow(2rem 2rem 0px #{{ accentColor }});}
+      .logoStyling:hover {filter: drop-shadow(4rem 4rem 0px #{{ accentColor }});}
+      .vectorAccent path{fill: #{{ accentColor }};}
+      .quickbutton, .quicklinks a {background-color: #{{ accentColor }};}
+      .postpanel{background-color: #{{ accentColor }};}
+      .button{background-color: #{{ accentColor }};}
+    {% endif %}
 
     {% if headerImage %}
-    .h1Panel {background-image: url("{{ headerImage }}");}
-      {% elif headerColor %}
+      .h1Panel {background-image: url("{{ headerImage }}");}
+    {% elif headerColor %}
       .h1Panel {background-color: #{{ accentColor }};}
-      {% else %}
-      .h1Panel {background-color: $accent-two;}
-      {% endif %}
+    {% endif %}
 
-    {% if accentColor %}
-    .quickbutton, .quicklinks a {background-color: #{{ accentColor }};}
-      {% else %}
-      .quickbutton, .quicklinks a {background-color: $accent-one;}
-      {% endif %}
-
-    {% if accentColor %}
-    .quickbutton, .quicklinks a {background-color: #{{ accentColor }};}
-      {% else %}
-      .quickbutton, .quicklinks a {background-color: $accent-one;}
-      {% endif %}
-
-    {% if accentColor %}
-    .postpanel{background-color: #{{ accentColor }};}
-      {% else %}
-      .postpanel{background-color: $accent-one;}
-      {% endif %}
-
-    {% if accentColor %}
-    .button{background-color: #{{ accentColor }};}
-      {% else %}
-      .button{background-color: $accent-one;}
-      {% endif %}
-
-{% if backgroundimage %}
-    body {background-image: url("{{ backgroundimage }}");}
+    {% if backgroundimage %}
+      body {background-image: url("{{ backgroundimage }}");}
     {% endif %}
     
-
     {% if backgroundcolor %}
-    body {background-color:#{{ backgroundcolor }};
-    {% else %}
-    body {background-color: $background-color;}
+      body {background-color:#{{ backgroundcolor }};
     {% endif %}
 
     
