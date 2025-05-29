@@ -75,6 +75,8 @@
       .h1Panel {background-image: url("{{ headerImage }}");}
     {% elif headerColor %}
       .h1Panel {background-color: #{{ accentColor }};}
+    {% else %}
+      .h1Panel {background-color: #00000000;}
     {% endif %}
 
     {% if backgroundimage %}
