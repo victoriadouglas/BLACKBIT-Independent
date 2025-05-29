@@ -624,6 +624,12 @@ position: relative;
   z-index: -10;
 }
 
+.plxinsert {
+  max-height: 100vh;
+  margin: 0 auto;
+  z-index: -10;
+}
+
 .squared {
   max-height: 70vh;
   margin-top: 10vh;
@@ -652,5 +658,36 @@ position: relative;
 /* -------------------- Vector Accent Fills -------------------- */
 
 .vectorAccent path {
-  fill: $accent-one;
+  fill: #000000;
+}
+
+.vectorVicto {
+  width:85vw;
+}
+/* -------------------- Marquee -------------------- */
+
+#marquee-container {
+  background-color: #000000;
+  width: 200vw;
+  margin: 50px auto;
+  overflow: hidden;
+  display: flex;
+  margin-top: 40vh;
+}
+
+#marquee-content {
+  
+  display: flex;
+  align-items: flex-end;
+  flex-shrink: 0;
+  height: 100%;
+  h2 {
+    color: white;
+    position: relative;
+    width: 100%;
+    white-space-collapse:preserve-spaces;
+    font-size: 4rem;
+    padding: 0;
+  }
+  
 }

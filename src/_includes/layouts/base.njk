@@ -67,6 +67,12 @@
       .navstuff {background-color: $accent-one;}
       {% endif %}
 
+    {% if accentColor %}
+    .vectorAccent path{fill: #{{ accentColor }};}
+      {% else %}
+      .vectorAccent path{fill: $accent-one;}
+      {% endif %}
+
     {% if headerImage %}
     .h1Panel {background-image: url("{{ headerImage }}");}
       {% elif headerColor %}
