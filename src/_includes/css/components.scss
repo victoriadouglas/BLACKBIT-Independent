@@ -45,7 +45,7 @@
 
 .grid {
   display: flex;
-  width: 80vw;
+  width: 100%;
   margin: 0 auto;
   .grid-col {
     flex: 1;
@@ -279,7 +279,8 @@
   width: 90%;
   text-align: center;
   margin: 25px 0 25px 0;
-  padding: 10px;
+  padding: 5px;
+  width: 98%;
   font-size: 1.6rem;
   font-family: "Jersey15", monospace;
   font-weight: 700;
@@ -355,20 +356,25 @@
 
 
 /* -------------------- Paneling 2.0 -------------------- */
-.bordered {
-  border-left: solid #222222 10px;
-  padding-left: 50px;
-}
+
 
 .paneled {
   border:#222222 solid 5px;
   background-color: $background-color;
   filter: drop-shadow(10px 10px 0px #222222);
-  margin: 20px 10px;
+  margin: 20px 0px;
   border-radius: 10px;
-  h2, p, .button {
-    margin:20px;
-  }
+  padding:10px 10px;
+  @include breakpoint(tablet) {padding:0 0px;}
+  @include breakpoint(desktop) {padding:0 0px;}
+}
+
+.bordered {
+  border-left: solid #222222 10px;
+  padding-left: 5px;
+  border-left: solid #222222 20px;
+  @include breakpoint(tablet) { padding-left: 10px; border-left: solid #222222 20px; }
+  @include breakpoint(desktop) { padding-left: 10px; border-left: solid #222222 50px;}
 }
 
 
@@ -407,11 +413,6 @@ position: relative;
     bottom: 10px;
     right:20px;
   }
-
-.bordered {
-  border-left: solid #222222 50px;
-  padding-left: 50px;
-}
 .postpanel{
   background-color: $accent-one;
   font-family: "Jersey15", monospace;
@@ -438,12 +439,12 @@ position: relative;
 .button {
   font-family: "Jersey15", monospace;
   font-weight: 700;
-  border:black solid 1rem;
+  border:black solid 5px;
   background-color: $accent-one;
   filter: drop-shadow(3px 3px 0px black);
   transition-duration: 200ms;
-  font-size: 4rem;
-  padding: 3rem;
+  font-size: 3rem;
+  padding: 20px;
   line-height: 0rem;
   border-radius: 1rem;
 
@@ -504,6 +505,7 @@ position: relative;
   letter-spacing: .1rem;
   text-transform: uppercase;
   min-width: 220px;
+  line-height: 2.5rem;
   font-smooth: none;
 }
 
@@ -535,7 +537,7 @@ position: relative;
 }
 
 .navbar .icon {
-  background: none;
+  background: white;
   padding: 1.5rem 2rem;
   color: $line-color;
   padding: 1.5rem 2rem;
@@ -638,9 +640,11 @@ position: relative;
 .plx {
   position: absolute;
   max-height: 100vh;
-  left: 55%;
+  left: 50%;
   transform: translate(-50%, 0%);
   z-index: -10;
+  @include breakpoint(tablet) { left:50%; }
+  @include breakpoint(desktop) { left:55%; }
 }
 
 .plxinsert {
@@ -658,14 +662,8 @@ position: relative;
   left:0%;
   top:0;
   transform: translate(0, 0%) scale(100%);
-}
-
-@media (min-width: 800px) {
-  .plxleft {
-    left:10%;
-    top:0;
-    transform: translate(0, 0%) scale(100%);
-  }
+  @include breakpoint(tablet) { left:0%; }
+  @include breakpoint(desktop) { left:10%; }
 }
 
 .plxright {
@@ -711,7 +709,7 @@ position: relative;
     width: 100%;
     white-space-collapse:preserve-spaces;
     font-size: 4rem;
-    padding: 0;
+    padding-top: 10px;
   }
   
 }
@@ -722,13 +720,15 @@ position: relative;
   img {
     display: block;
   }
+  h4, p, .button{margin-left: 10px;}
+  p {margin-bottom: 20px;}
 }
 
 .horizontalcard {
   img {
     display: block;
   }
-  h2 {
+  h4 {
     padding: 0;
     margin-top: 20px;
   }
@@ -740,4 +740,26 @@ position: relative;
   p {
     margin: 5px 20px;
   }
+}
+
+/* -------------------- Home Page -------------------- */
+
+.home-offset {
+  padding-top: 50vh;
+  @include breakpoint(tablet) { padding-top: 70vh; }
+  @include breakpoint(desktop) { padding-top: 80vh; }
+}
+
+/* -------------------- Home Page -------------------- */
+
+img:hover {
+  webkit-filter: blur(0px); /* Chrome, Safari, Opera */
+  filter: blur(0px);
+  transition-duration: 200ms;
+}
+
+img:hover {
+  webkit-filter: blur(10px); /* Chrome, Safari, Opera */
+  filter: blur(10px);
+  transition-duration: 200ms;
 }

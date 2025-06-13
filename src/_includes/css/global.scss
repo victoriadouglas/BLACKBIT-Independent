@@ -5,6 +5,24 @@
   src: url("/fonts/fa-regualr-400.ttf") format("ttf");
 }
 
+/* -------------------- Media Query Mixins -------------------- */
+
+@mixin breakpoint($point) {
+  @if $point == desktop {
+    @media (min-width: 1200px) { @content; }
+  }
+  @else if $point == tablet {
+    @media (min-width: 800px)  { @content; }
+  }
+}
+
+.mediacopypaste {
+    width: 75%;
+    @include breakpoint(tablet) { width: 60%; }
+    @include breakpoint(desktop) { width: 80%; }
+}
+
+
 /* -------------------- Typography Treatments -------------------- */
 
 @font-face {
@@ -59,39 +77,48 @@ h1 {
   -webkit-text-stroke-color: black;
   paint-order: stroke fill;
   filter: drop-shadow(0.8rem 0.8rem 0px #000000);
-  margin-bottom: 0;
+  margin-bottom: 10px;
   line-height: 10rem;
-  padding-bottom: 30px;
+  
 }
 
 .h1Panel {
   background-color: $accent-two;
   display: block;
   width: 100vw;
-padding-top: 20vh;
+
   border-radius: 10px;
-  margin-bottom: 40px;
+  padding-top: 50px;
+  @include breakpoint(tablet) { padding-top: 5vh; }
+  @include breakpoint(desktop) { padding-top: 15vh; }
 }
 
 h2 {
   font-family: "Jersey15", sans-serif;
-  font-size: 5rem;
+  font-size: 3rem;
   letter-spacing: auto;
-  line-height: 4rem;
-  padding: 10px;
-  padding-left: 0;
-  margin-bottom: 10px;
+  line-height: 2rem;
+  padding: 10px 0;
+  padding-left: 10px;
+  @include breakpoint(tablet) { font-size: 4rem; padding-top: 20px; line-height: 4rem;}
+  @include breakpoint(desktop) { font-size: 5rem; }
 }
 
 h3 {
   font-family: "IBM BIOS", system-ui;
-  font-size: 2rem;
-  padding: 20px;
+  font-size: 1.5rem;
+  padding: 0px;
+  @include breakpoint(tablet) { padding-top: 5vh; }
+  @include breakpoint(desktop) { padding-top: 15vh; }
+  
 }
 
 h4 {
   font-family: "Roboto Mono", monospace;
+  text-transform: uppercase;
+  font-size: 2rem;
   font-weight: 900;
+  margin-top: 20px;
 }
 
 p {
@@ -222,7 +249,7 @@ $halftone: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKL
 
 main {
   min-height: 70vh;
-  max-width: 98vw;
+  max-width: 100vw;
   margin: 0 auto;
   img {
     max-width: 100%;
@@ -244,11 +271,13 @@ main {
 }
 
 .fullcontainer {
-  max-width: 85vw;
+  max-width: 98vw;
   margin: 0 auto;
   img {
     max-width: 100%;
   }
+  @include breakpoint(tablet) { max-width: 98vw; }
+  @include breakpoint(desktop) { max-width: 85vw; }
 }
 .datedisplay {
   padding: 0;
