@@ -2,7 +2,8 @@
 layout: layouts/base.njk
 ---
 <main>
-<div class="container">
+<div class="container" style="margin-top:20vh;">
+
 {% if thumbnail %}
 <img style="max-width: 100%" src="{{ thumbnail }}"/>
 {% endif %}
@@ -12,10 +13,7 @@ layout: layouts/base.njk
 <hr>
 
 {{ content | safe }}
-<div style="height:150px;"></div>
-<p><a href="{{ '/' | url }}">← Home</a></p>
-<p><a href="{{ '/posts/' | url }}">Blog Archive</a></p>
-{% include "components/disquscomments.njk" %}
+<a class="button" href="{{ '/posts/' | url }}">Back</a>
 </div>
 
 </main>

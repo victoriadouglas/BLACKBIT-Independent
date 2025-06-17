@@ -1,6 +1,0 @@
-{
-  "title": "templarvitae",
-  "layout": "layouts/templarpage.njk",
-  "tags": ["templar"],
-  "permalink": "{{ title | slug }}/episode{{ chapter }}/page{{ pagenumber }}/"
-}

@@ -1,94 +1,5 @@
 @import "variables.scss";
 
-/* -------------------- Nav -------------------- */
-
-.navbar {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  grid-template-columns: 1fr 1fr;
-  width: 100%;
-  margin: 0 auto;
-  overflow: hidden;
-  z-index: 9999;
-}
-.navlogo {
-  padding: 10px;
-}
-.home {
-  float: left;
-  font-family: "Kode Mono", monospace;
-  font-weight: 700;
-  color: $line-color;
-  margin: 2rem 0; /* 16px /16 */
-  font-size: 1.45em; /* 16px /16 */
-  text-decoration: none;
-  a {
-    padding: 1rem 2rem;
-  }
-}
-.home :link:not(:hover) {
-  text-decoration: none;
-}
-.home :hover {
-  text-decoration: none;
-  color: $background-color;
-  background-color: $line-color;
-  transition: 0.1s;
-}
-.navbar .logodiv {
-  a {
-    color: black;
-    background: none;
-  }
-}
-
-.navbar .logodiv {
-  a:hover {
-    background-color: $line-color;
-    color: $background-color;
-  }
-}
-
-.nav-item {
-  text-decoration: none;
-  display: inline-block;
-  padding: 2rem 3rem;
-  color: $base-text;
-  background: none;
-  font-family: "Kode Mono", monospace;
-  font-weight: 700;
-  text-transform: lowercase;
-  z-index: 9999;
-}
-
-.nav-item:hover {
-  color: $background-color;
-  background-color: $line-color;
-  transition: 0.2s;
-}
-.nav-item-active {
-  text-decoration: none;
-  color: white;
-  background-color: $line-color;
-}
-
-.nav-item-active:hover {
-  background-color: $dark-grey;
-}
-
-.navstuff i {
-  font-size: 1.5rem;
-}
-
-.logotitle {
-  max-height: 100vh;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 /* -------------------- Highlight Sect -------------------- */
 
 .highlight {
@@ -99,68 +10,6 @@
 
 .highlight h1,.highlight h2,.highlight h3,.highlight h4,.highlight h5,.highlight p {
   color: $background-color;
-}
-
-/* -------------------- Navbar responsiveness -------------------- */
-
-.navbar .icon {
-  display: none;
-  color: $line-color;
-  background: none;
-  padding: 1.5rem 2rem;
-}
-
-.navbar .icon:hover {
-  color: white;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  background-color: $line-color;
-  a {
-    color: "white";
-  }
-}
-
-.navstuff {
-  padding-right: 30px;
-}
-
-@media screen and (max-width: 800px) {
-  .navstuff {
-    display: none;
-  }
-  .navbar a.icon {
-    display: inline-block;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .navstuff.responsive {
-    padding-bottom: 20px;
-    background-color: white;
-    margin-top: 50px;
-    -webkit-transition: all 0.2s;
-    transition: all 0.2s;
-    position: absolute;
-    display: inline-block;
-    right: 20px;
-    z-index: 9999;
-  }
-  .navstuff.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding-right: 30px;
-  }
-  .navstuff.responsive a {
-    float: none;
-    padding-left: 100px;
-    padding-bottom: 10px;
-    padding-right: 20px;
-    display: block;
-    text-align: right;
-    -webkit-transition: all 0.2s;
-    transition: all 0.2s;
-  }
 }
 
 /* -------------------- Custom Scrollbar -------------------- */
@@ -192,57 +41,11 @@
   font-size: 2rem;
 }
 
-/* -------------------- Manga Panel Utilities GOD FUCK THIS SHIT -------------------- */
-
-.mangapage {
-  max-width: 95vw;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  display: grid;
-  grid-gap: 10px;
-  img {
-    display: block;
-    width: 100%;
-  }
-  div {
-    min-height: 100px;
-  }
-}
-
-.mangapaper {
-  background-color: $translucent-grey;
-}
-
-.mangacontent {
-  h1 {
-    margin: 0;
-  }
-  padding: 20px;
-}
-
-.mangapad {
-  padding: 20px;
-}
-
-.mangapanel {
-  border-radius: 5px;
-  -webkit-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
-  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
-  margin-top: 20px;
-  img {
-    display: block;
-  }
-}
-.mangahalftone {
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAF0lEQVQYlWNgYGD4D8U4AUEF1Af0dhMAOBcH+bmFHC0AAAAASUVORK5CYII=);
-}
-
 /* -------------------- Masonry Grid -------------------- */
 
 .grid {
   display: flex;
-  width: 90vw;
+  width: 100%;
   margin: 0 auto;
   .grid-col {
     flex: 1;
@@ -285,16 +88,33 @@
   }
 }
 
+.imagecard {
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
+  transition-duration: 200ms;
+  z-index: 20000;
+}
+
+.imagecard:hover {
+  transform: scale(130%) rotate(3deg);
+}
+
+
 /* -------------------- Comics Nav -------------------- */
 
 .comicnav {
-  padding: 20px 0;
-  margin: 10px auto;
+  padding: 20px;
+  margin: 10px auto 20px;
+  border: solid black 8px;
+  filter: drop-shadow(10px 10px 0px #000000);
   position: relative;
-  width: 960px;
+  border-radius: 20px;
+  width: 700px;
   max-width: 90vw;
   display: grid;
-  grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   justify-items: center;
   align-items: center;
   a {
@@ -314,20 +134,26 @@
   justify-items: center;
 
   select {
-    width: 200px;
+    width: 160px;
     max-width: 90vw;
     padding: 0.5rem;
     margin-bottom: 0.5rem;
   }
 }
 
-/* -------------------- Footer -------------------- */
-
-.footerseating {
-  min-height: 100vh;
-  display: grid;
-  grid-template-rows: 1fr auto;
+.navButton{
+  transition: 0.2s;
+  transform: scale(1) rotate(0deg);
 }
+
+.navButton:hover{
+  transition: 0.2s;
+  transform: scale(1.2) rotate(5deg);
+}
+
+
+
+/* -------------------- Footer -------------------- */
 
 .footer {
   ul {
@@ -461,28 +287,28 @@
   transition: 0.2s;
 }
 
-/* -------------------- Disqus Styling -------------------- */
-#disqus_thread {
-  background-color: $background-color;
-  padding: 20px;
-  margin-bottom: 150px;
-}
-
 /* -------------------- Quick Links -------------------- */
 .quickbutton, .quicklinks a {
-  display: inline-block;
-  width: 100%;
+  display: block;
+  width: 90%;
   text-align: center;
   margin: 25px 0 25px 0;
-  padding: 10px;
-  font-size: 1.5rem;
-  font-family: "Kode Mono", monospace;
+  padding: 5px;
+  width: 98%;
+  font-size: 1.6rem;
+  font-family: "Jersey15", monospace;
   font-weight: 700;
   border:#222222 solid 5px;
   background-color: $accent-one;
   filter: drop-shadow(10px 10px 0px #222222);
   border-radius: 10px;
   transition-duration: 200ms;
+  h2 {
+    margin: 0;
+  }
+  p {
+    margin: 0;
+  }
 }
 
 .quickbutton:hover, .quicklinks a:hover{
@@ -494,31 +320,38 @@
 }
 
 .quicksmall {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   width: 80%;
   padding: 5px;
 }
 
 @media (min-width: 768px) {
   .quickbutton, .quicklinks a {
-    display: inline-block;
-    width: 100%;
+    display: block;
+    width: 90%;
     text-align: center;
-    margin: 25px 0 25px 0;
-    padding: 40px;
-    font-size: 3rem;
-    font-family: "Kode Mono", monospace;
+    margin: 30px auto;
+    padding: 10px;
+    font-family: "Jersey15", monospace;
     font-weight: 700;
-    border:#222222 solid 5px;
+    border:#222222 solid 8px;
     background-color: $accent-one;
     filter: drop-shadow(10px 10px 0px #222222);
     border-radius: 10px;
     transition-duration: 200ms;
+    p {
+      max-width: none;
+      margin: 0 !important;
+    }
+    h2 {
+      text-transform: uppercase;
+      margin: 0 !important;
+    }
   }
   
   .quickbutton:hover, .quicklinks a:hover{
     font-weight: 700;
-    border:#222222 solid 5px;
+    border:#222222 solid 8px;
     background-color: #222222;
     color: white;
     filter: drop-shadow(30px 30px 0px #222222);
@@ -527,7 +360,7 @@
 .quicksmall {
   font-size: 2rem;
   width: auto;
-  padding: 20px;
+  padding: 0 2rem ;
 }
 }
 
@@ -537,40 +370,39 @@
 
 
 /* -------------------- Paneling 2.0 -------------------- */
-.bordered {
-  border-left: solid #222222 10px;
-  padding-left: 50px;
-}
+
 
 .paneled {
   border:#222222 solid 5px;
   background-color: $background-color;
   filter: drop-shadow(10px 10px 0px #222222);
-  padding:20px;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin: 20px 0px;
+  border-radius: 10px;
+  padding:10px 10px;
+  @include breakpoint(tablet) {padding:0 0px;}
+  @include breakpoint(desktop) {padding:0 0px;}
 }
 
-.containerstart {
-  margin-top: 0;
+.bordered {
+  border-left: solid #222222 10px;
+  padding-left: 5px;
+  border-left: solid #222222 20px;
+  @include breakpoint(tablet) { padding-left: 10px; border-left: solid #222222 20px; }
+  @include breakpoint(desktop) { padding-left: 10px; border-left: solid #222222 50px;}
 }
+
 
 .postpanel{
 background-color: $accent-one;
-border:#222222 solid 5px;
-border-radius: 10px;
-padding: 5px;
-font-family: "Kode Mono", monospace;
+font-family: "Jersey15", monospace;
 font-weight: 700;
-filter: drop-shadow(5px 5px 0px #222222);
 transition-duration: 200ms;
-margin-right: 20px;
-font-size: 1.3rem;
+line-height: 3rem;
+font-size: 3rem;
 }
 
 .postpanel:hover {
   font-weight: 700;
-  border:#222222 solid 5px;
   background-color: #222222;
   color: white;
   filter: drop-shadow(15px 15px 0px #222222);
@@ -578,7 +410,8 @@ font-size: 1.3rem;
 
 
 .bookfloat {
-padding-top: 30px;
+top: -100px;
+position: relative;
 }
 
 .fixCTA {
@@ -594,37 +427,22 @@ padding-top: 30px;
     bottom: 10px;
     right:20px;
   }
-
-  .containerstart {
-    margin-top: -10vw;
-  }
-.bordered {
-  border-left: solid #222222 50px;
-  padding-left: 50px;
-}
 .postpanel{
   background-color: $accent-one;
-  border:#222222 solid 5px;
-  border-radius: 10px;
-  padding: 20px;
-  font-family: "Kode Mono", monospace;
-  font-weight: 700;
-  filter: drop-shadow(5px 5px 0px #222222);
+  font-family: "Jersey15", monospace;
   transition-duration: 200ms;
-  margin-right: 20px;
-  font-size: 2rem;
+  font-size: 4rem;
   }
   
   .postpanel:hover {
     font-weight: 700;
-    border:#222222 solid 5px;
     background-color: #222222;
     color: white;
     filter: drop-shadow(15px 15px 0px #222222);
   }
 
   .bookfloat {
-    max-width:600px; 
+    max-width:900px; 
     float:right;
     margin-right:-5vw;
   }
@@ -633,26 +451,29 @@ padding-top: 30px;
 
 
 .button {
-  font-family: "Kode Mono", monospace;
+  font-family: "Jersey15", monospace;
   font-weight: 700;
-  border:#222222 solid 3px;
-  background-color: $background-color;
-  filter: drop-shadow(3px 3px 0px #222222);
+  border:black solid 5px;
+  background-color: $accent-one;
+  filter: drop-shadow(3px 3px 0px black);
   transition-duration: 200ms;
+  font-size: 3rem;
+  padding: 20px;
+  line-height: 0rem;
+  border-radius: 1rem;
+
 }
 
 .button:hover {
-  background-color: #222222;
+  background-color: black;
   color: white;
-  filter: drop-shadow(8px 8px 0px #222222);
-  border-color: #222222;
+  filter: drop-shadow(8px 8px 0px black);
+  border-color: black;
 }
 
 .button.button-primary {
-  font-family: "Kode Mono", monospace;
-  font-weight: 700;
-  border:#222222 solid 3px;
-  background-color: $accent-one;
+  border:#222222 solid 0.5rem;
+  background-color: $accent-two;
   filter: drop-shadow(3px 3px 0px #222222);
   transition-duration: 200ms;
   color:#222222;
@@ -664,3 +485,308 @@ padding-top: 30px;
   filter: drop-shadow(8px 8px 0px #222222);
   border-color: #222222;
 }
+
+/* -------------------- Nav 2.0 -------------------- */
+.menuScaler {
+  padding:0 0 0 220px;
+}
+
+.navbar {
+  overflow: hidden;
+  z-index: 4000;
+}
+
+.navstuff{
+  position: fixed;
+  background-color: $accent-one;
+  height: 100vh;
+  z-index: 4000;
+  filter: drop-shadow(2px 2px 2px #0000005e);
+  width: 10vw;
+  min-width: 220px;
+}
+
+.nav-item {
+  text-decoration: none;
+  display:block;
+  padding: 0rem 0 0 2rem;
+  width: 10vw;
+  color: $base-text;
+  background: none;
+  font-family: "IBM BIOS-2y", monospace;
+  z-index: 9999;
+  font-size: 2rem;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  min-width: 220px;
+  line-height: 2.5rem;
+  font-smooth: none;
+}
+
+.nav-item:hover {
+  color: $background-color;
+  background-color: $line-color;
+  transition: 0.2s;
+}
+.nav-item-active {
+  text-decoration: none;
+  color: white;
+  background-color: $line-color;
+}
+
+.nav-item-active:hover {
+  background-color: $dark-grey;
+}
+
+/* -------------------- Navbar responsiveness -------------------- */
+
+.headerBlackbit {
+  position: fixed;
+  right: 0;
+  top:0;
+  padding: 20px;
+  z-index: 9000;
+  width: 20vw;
+  display: block;
+}
+
+.navbar .icon {
+  background: white;
+  padding: 1.5rem 2rem;
+  color: $line-color;
+  padding: 1.5rem 2rem;
+}
+
+.navbar .icon:hover {
+  color: white;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  background-color: $line-color;
+  a {
+    color: "white";
+  }
+}
+
+.navbar a.icon {
+  position: fixed;
+  right: 0;
+  z-index: 9000;
+  display: none;
+}
+
+
+@media screen and (max-width: 900px) {
+  .headerBlackbit {
+    display: none;
+  }
+  .menuScaler {
+    padding:0 0 0 0;
+  }
+  .navstuff {
+    display: none;
+  }
+  .navbar a.icon {
+    position: fixed;
+    right: 0;
+    display:block;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .navstuff.responsive {
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    position: fixed;
+    display: block;
+    left: 0;
+    z-index: 4000;
+    background-color: $accent-one;
+    width: 100vw;
+    height:100vh;
+  }
+  .navstuff.responsive .icon {
+    display: block;
+    position: fixed;
+    right: 10;
+    top: 0;
+    padding-right: 30px;
+    color: white;
+    background-color: #222222;
+  }
+  .navstuff.responsive a {
+    display: block;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+}
+
+/* -------------------- Global Outline -------------------- */
+.logoStyling {
+  margin: 10px;
+  text-decoration: none;
+  background-color: #00000000;
+  filter: drop-shadow(2rem 2rem 0px #fcba03);
+  transition-duration: 200ms;
+  img {
+    transition-duration: 200ms;
+    width: 30vw;
+    max-width: 100vw;
+    min-width: 400px;
+    transform: scale(1) rotate(0deg);
+    padding: 20px 20px;
+  }
+
+}
+
+.mobileLogo {
+  position: fixed;
+  z-index: 2000;
+  size: 70%;
+  img {
+    padding: 0;
+  }
+  @include breakpoint(tablet) { display: none; }
+  @include breakpoint(desktop) { left:55%; }
+}
+
+.logoStyling:hover {
+  background-color: #00000000;
+  color: white;
+  filter: drop-shadow(4rem 4rem 0px $accent-one);
+  transition-duration: 200ms;
+  border-color: #222222;
+  img {
+    transform: scale(1.05) rotate(1deg);
+  }
+}
+
+/* -------------------- Parallax -------------------- */
+
+.plx {
+  position: absolute;
+  max-height: 100vh;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: -10;
+  @include breakpoint(tablet) { left:50%; }
+  @include breakpoint(desktop) { left:55%; }
+}
+
+.plxinsert {
+  max-height: 100vh;
+  margin: 0 auto;
+  z-index: -10;
+}
+
+.squared {
+  max-height: 70vh;
+  margin-top: 10vh;
+}
+
+.plxleft {
+  left:0%;
+  top:0;
+  transform: translate(0, 0%) scale(100%);
+  @include breakpoint(tablet) { left:0%; }
+  @include breakpoint(desktop) { left:10%; }
+}
+
+.plxright {
+  right:0%;
+  top:0;
+  transform: translate(0, 0%) scale(100%);
+}
+
+/* -------------------- Vector Accent Fills -------------------- */
+
+.vectorAccent path {
+  fill: #000000;
+}
+
+.vectorVicto {
+  width:85vw;
+}
+/* -------------------- Marquee -------------------- */
+
+
+
+#marquee-container {
+  background-color: #000000;
+  width: 200vw;
+  margin: 50px auto;
+  overflow: hidden;
+  display: flex;
+  
+}
+.homemarquee {
+  margin-top: 40vh !important;
+}
+
+#marquee-content {
+  
+  display: flex;
+  align-items: flex-end;
+  flex-shrink: 0;
+  height: 100%;
+  h2 {
+    color: white;
+    position: relative;
+    width: 100%;
+    white-space-collapse:preserve-spaces;
+    font-size: 4rem;
+    padding-top: 10px;
+    padding-bottom: 0;
+  }
+  
+}
+
+/* -------------------- Cards -------------------- */
+
+.verticalcard {
+  img {
+    display: block;
+  }
+  h4, p, .button{margin-left: 10px;}
+  p {margin-bottom: 20px;}
+}
+
+.horizontalcard {
+  img {
+    display: block;
+  }
+  h4 {
+    padding: 0;
+    margin-top: 20px;
+  }
+  .button {
+    margin: 20px;
+    font-size: 2rem;
+    padding: 20px;
+  }
+  p {
+    margin: 5px 20px;
+  }
+}
+
+/* -------------------- Home Page -------------------- */
+
+.home-offset {
+  padding-top: 50vh;
+  @include breakpoint(tablet) { padding-top: 70vh; }
+  @include breakpoint(desktop) { padding-top: 80vh; }
+}
+
+/* -------------------- Home Page -------------------- */
+/*
+img:hover {
+  webkit-filter: blur(0px); 
+  filter: blur(0px);
+  transition-duration: 200ms;
+}
+
+img:hover {
+  webkit-filter: blur(10px); 
+  filter: blur(10px);
+  transition-duration: 200ms;
+}
+*/

@@ -1,0 +1,287 @@
+---
+title: Commissions
+backgroundcolor: #e6e6e6
+permalink: /commissions/
+---
+
+<!--
+eleventyNavigation:
+  key: Commissions
+  order: 8
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<div class="container">
+  <a class="button"onClick="javascript:location.reload(true)">Reroll</a>
+  <p id="result"></p>
+</div>
+
+<style>
+body {background-color: #e6e6e6;}
+.wrapper {
+  padding: 20px;
+  display: block;
+}
+.wrapper h1, a, p, button {
+  margin: 40 0;
+  text-transform: uppercase;
+  font-family: "Courier Prime", monospace;
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 4rem;
+
+}
+.wrapper p {
+  font-size:48px;
+  font-weight: 800;
+  max-width: 500px;
+}
+.wrapper .button {
+  color: #000000;
+  margin-bottom:50px;         
+}
+</style>
+
+<script>
+// Booleans
+
+var adjCheck = false;
+var sizeCheck = false;
+var ageCheck = false;
+var jobCheck = false;
+var propCheck = false;
+
+// Chances
+var adjChance = 5;
+var sizeChance = 5;
+var ageChance = 5;
+var jobChance = 7;
+var propChance = 4;
+
+
+// Word Lists
+
+const adjList = [
+  "quiet", 
+  "slightly ugly", 
+  "loudmouthed", 
+  "powerful", 
+  "reserved", 
+  "androgynous",
+  "unfiltered",
+  "wise",
+  "vain",
+  "easy-going",
+  "hard-working",
+  "lazy",
+  "chatty",
+  "gothic",
+  "edgy",
+  "punk",
+  "professional",
+  "selfish",
+  "brave",
+  "cowardly",
+  "angry"
+]
+
+const sizeList = [
+  "tall", 
+  "short", 
+  "athletic", 
+  "overweight",
+  "rotund",
+  "intimidating", 
+  "average-looking",
+  "disabled",
+  "bald",
+  "beautiful",
+  "skinny",
+  "lanky"
+]
+
+const ageList = [
+  "young", 
+  "mid-30's", 
+  "retired", 
+  "ancient", 
+  "teenage", 
+  "old",
+  "adult",
+  "immortal",
+  "timeless"
+]
+
+
+const nationList = [
+  "man", 
+  "woman",
+  "grandparent",
+  "sociopath",
+  "person", 
+  "android", 
+  "twink",
+  "anthro",
+  "bear",
+  "ghost",
+  "demon",
+  "alien"
+]
+
+const jobList = [
+  "a courier", 
+  "a businessman", 
+  "a mechanic", 
+  "a barbarian", 
+  "a politician",
+  "a doctor",
+  "a researcher",
+  "a farmer",
+  "a craftsman",
+  "an artisan",
+  "a custodian",
+  "a CEO",
+  "a pilot",
+  "a driver",
+  "a taxi driver",
+  "a racer",
+  "a lawyer",
+  "a revolutionary",
+  "a middle manager",
+  "a socialite",
+  "a member of royalty",
+  "a librarian",
+  "a freeloader",
+  "a warrior",
+  "a soldier",
+  "a stoner",
+  "a deliveryman",
+  "a chef",
+  "a receptionist"
+]
+
+const propList = [
+  "a chip on their shoulder",
+  "a large sword",
+  "an umbrella",
+  "a pencil tucked behind their ear",
+  "a notebook",
+  "a secret",
+  "a bad attitude",
+  "a pair of wings",
+  "heterochromia",
+  "two pairs of wings",
+  "digitigrade legs",
+  "a big facial scar",
+  "a missing limb",
+  "a traumatic past",
+  "one eye",
+  "a peg leg",
+  "a powerful aura",
+  "the best legs you've ever seen",
+  "freckles",
+  "nothing going for them",
+  "a defeatist attitude",
+  "a mountain of debt",
+  "a companion pet",
+  "a bird on their shoulder",
+  "a package to protect",
+  "a gun",
+  "too much confidence"
+]
+
+// Random Chances
+
+let adjRandChance = Math.floor(Math.random() * 10)+1;
+let sizeRandChance = Math.floor(Math.random() * 10)+1;
+let ageRandChance = Math.floor(Math.random() * 10)+1;
+let jobRandChance = Math.floor(Math.random() * 10)+1;
+let propRandChance = Math.floor(Math.random() * 10)+1;
+
+if (adjRandChance < adjChance) {
+  var adjCheck = true;
+} else {
+  var adjCheck = false;
+}
+
+if (sizeRandChance < sizeChance) {
+  var sizeCheck = true;
+} else {
+  var sizeCheck = false;
+}
+
+if (ageRandChance < ageChance) {
+  var ageCheck = true;
+} else {
+  var ageCheck = false;
+}
+
+if (jobRandChance < jobChance) {
+  var jobCheck = true;
+} else {
+  var jobCheck = false;
+}
+
+if (propRandChance < propChance) {
+  var propCheck = true;
+} else {
+  var propCheck = false;
+}
+
+
+// All the math to set final variables on Boolean True
+
+let adjRandInt = Math.floor(Math.random() * (adjList.length - 1));
+var adj = `TEST`;
+if (adjCheck) {
+  var adj = ` `+adjList[adjRandInt];
+} else {
+  var adj = ``;
+}
+
+let sizeRandInt = Math.floor(Math.random() * (sizeList.length - 1));
+var size = `TEST`;
+if (sizeCheck) {
+  var size = ` `+sizeList[sizeRandInt];
+} else {
+  var size = ``;
+}
+
+let ageRandInt = Math.floor(Math.random() * (ageList.length - 1));
+var age = `TEST`;
+if (ageCheck) {
+  var age = ` `+ageList[ageRandInt];
+} else {
+  var age = ``;
+}
+
+let nationRandInt = Math.floor(Math.random() * (nationList.length - 1));
+let nation = ` `+nationList[nationRandInt];
+
+let jobRandInt = Math.floor(Math.random() * (jobList.length - 1));
+var job = `TEST`;
+if (jobCheck) {
+  var job = ` who is `+jobList[jobRandInt];
+} else {
+  var job = ``;
+}
+
+let propRandInt = Math.floor(Math.random() * (propList.length - 1));
+var prop = `TEST`;
+if (propCheck) {
+  var prop = ` with `+propList[propRandInt];
+} else {
+  var prop = ``;
+}
+
+if (jobCheck || propCheck) {
+  var comma = `,`;
+} else {
+  var comma = ``;
+}
+
+// Set Text Box to Final Result
+
+let textbox = document.getElementById("result").innerHTML = `The ${adj}${size}${age}${nation}${comma}${job}${prop}`;
+</script>

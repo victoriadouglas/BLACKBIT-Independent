@@ -1,0 +1,10 @@
+{
+  "layout": "layouts/comicPage.njk",
+  "title": "Biblioware: comix to update ur phone to",
+  "slugTitle": "biblioware",
+  "tags": ["biblioware"],
+  "titleimage": "/img/logo/bibliowarelogo.png",
+  "backgroundcolor": "fff301",
+  "accentColor": "fefefe",
+  "collectionKey": "collections.biblioware"
+}

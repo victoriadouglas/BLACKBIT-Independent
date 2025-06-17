@@ -1,4 +1,5 @@
 ---
+title: Character Design Generator
 navmoji: 🙅🙆💁
 backgroundcolor: #e6e6e6
 permalink: /charactergen/
@@ -8,48 +9,36 @@ permalink: /charactergen/
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-
+<div class="container">
 <div class="wrapper">
-  <h1>Character Design Generator</h1>
-  <button onClick="javascript:location.reload(true)">Reroll</button>
+  <a class="button"onClick="javascript:location.reload(true)">Reroll</a>
   <p id="result"></p>
+</div>
 </div>
 
 <style>
 body {background-color: #e6e6e6;}
 .wrapper {
-  margin: 0 auto;
   padding: 20px;
-  display: grid;
-  place-items: center;
+  display: block;
 }
 .wrapper h1, a, p, button {
-  margin: 40 auto;
+  margin: 40 0;
   text-transform: uppercase;
   font-family: "Courier Prime", monospace;
   font-size: 3rem;
   font-weight: 600;
-  line-height: 3rem;
+  line-height: 4rem;
   margin-bottom:40px;
 }
 .wrapper p {
   font-size:48px;
   font-weight: 800;
+  max-width: 500px;
 }
-.wrapper button {
-  display: inline-block;
-  outline: none;
-  cursor: pointer;
-  font-size: 3rem;
-  line-height: .5rem;
-  font-weight: 600;
-  border-radius: 8px;
-  padding: 24px 40px;
-  
-  border: none;
-  transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
-  background: linear-gradient(to right, rgb(230, 30, 77) 0%, rgb(227, 28, 95) 50%, rgb(215, 4, 102) 100%);
-  color: #fff;          
+.wrapper .button {
+  color: #000000;
+  margin-bottom:50px;         
 }
 </style>
 

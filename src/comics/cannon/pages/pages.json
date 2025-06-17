@@ -1,0 +1,10 @@
+{
+  "layout": "layouts/comicPage.njk",
+  "title": "Content Cannon",
+  "slugTitle": "cannon",
+  "tags": ["cannon"],
+  "titleimage": "/img/logo/cannonlogo.jpg",
+  "backgroundcolor": "ffffff",
+  "accentColor": "be2548",
+  "collectionKey": "collections.cannon"
+}

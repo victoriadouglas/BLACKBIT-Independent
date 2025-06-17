@@ -14,7 +14,18 @@
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
     <script src="/js/colcade.js"></script>
     <script src="/js/hammer.js"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Draggable.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/MorphSVGPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<!-- ScrollSmoother requires ScrollTrigger -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/TextPlugin.min.js"></script>
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jacquard+12&display=swap" rel="stylesheet">
@@ -36,43 +47,49 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"> 
   </head>
   <body>
-    <div class="footerseating">
-    <div class="notfooter">
+    
     {% include "components/navbar.njk" %}
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <div class="menuScaler">  
+
     
     {{ content | safe }}
 
 
   
-    <p class="signature">
-    // victoria douglas 2024 ++
-    </p>
-    {% include "components/accent.njk" %}
+  
 
     <style>
-    {% if navbarcolor %}
-    .navstuff {background-color: {{ navbarcolor }};}
-      {% else %}
-      .navstuff {background: none;}
-      {% endif %}
+    {% if accentColor %}
+      .navstuff {background-color: #{{ accentColor }};}
+      .logoStyling {filter: drop-shadow(2rem 2rem 0px #{{ accentColor }});}
+      .logoStyling:hover {filter: drop-shadow(4rem 4rem 0px #{{ accentColor }});}
+      .vectorAccent path{fill: #{{ accentColor }};}
+      .quickbutton, .quicklinks a {background-color: #{{ accentColor }};}
+      .postpanel{background-color: #{{ accentColor }};}
+      .button{background-color: #{{ accentColor }};}
+    {% endif %}
 
-{% if backgroundimage %}
-    body {background-image: url("{{ backgroundimage }}");}
+    {% if headerImage %}
+      .h1Panel {background-image: url("{{ headerImage }}");}
+    {% elif headerColor %}
+      .h1Panel {background-color: #{{ headerColor }};}
+    {% else %}
+      .h1Panel {background-color: #00000000;}
+    {% endif %}
+
+    {% if backgroundimage %}
+      body {background-image: url("{{ backgroundimage }}");}
     {% endif %}
     
-
     {% if backgroundcolor %}
-    body {background-color:#{{ backgroundcolor }};
-    {% else %}
-    body {background-color: #f0f0f0;
+      body {background-color:#{{ backgroundcolor }};
     {% endif %}
 
     
     </style>
-  </div>
-
-
-    <footer class="footer">
+      <footer class="footer">
     {% include "components/footer.njk" %}
     <script>
 function myFunction() {
@@ -85,7 +102,19 @@ function myFunction() {
 }
 </script>
     </footer>
-    <!-- Current page: {{ page.url | url }} -->
+  </div>
     </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Draggable.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/MorphSVGPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<!-- ScrollSmoother requires ScrollTrigger -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/TextPlugin.min.js"></script>
+<script src="/js/gsap.js"></script>
   </body>
 </html>

@@ -1,0 +1,9 @@
+---
+layout: layouts/page.njk
+---
+<div class="container">
+{% set pagelist = collections[slugTitle] | reverse %}
+{% set pagelistCounter = collections[slugTitle] | length %}
+<p>{{ comicDescription }}</p>
+{% include "components/comicslist.njk" %}
+</div>

@@ -1,0 +1,10 @@
+{
+  "layout": "layouts/comicPage.njk",
+  "title": "A Timeless Observer Perceived an Elevator",
+  "slugTitle": "elevator",
+  "tags": ["elevator"],
+  "titleimage": "/img/logo/elevatorlogo.jpg",
+  "backgroundcolor": "1e1e1e",
+  "accentColor": "bdbdbd",
+  "collectionKey": "collections.elevator"
+}

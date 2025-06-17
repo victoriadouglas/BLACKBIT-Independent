@@ -1,16 +1,17 @@
-<div class="bigcontainer">
-{% if titleimage %}
-    <img class="logotitle" src="{{ titleimage }}"/>
-{% else %}
-    <h1 class="heading heading--stroke heading--halftone">{{ title }}</h1>
-{% endif %}
 
-{% if description %}
+{% if titleimage %}
+<div class="container">
+    <img class="logotitle" src="{{ titleimage }}"/>
+</div>
+{% else %}
+<div class="h1Panel">
     <div class="container">
-    <div class="paneled">
-        <p>{{ description }}</p>
+    <h1 class="">+ {{ title }}</h1>
     </div>
-    </div>
-    
+</div>
+{% endif %}
+<div class="container">
+{% if description %}
+        <h2>{{ description }}</h2>
 {% endif %}
 </div>

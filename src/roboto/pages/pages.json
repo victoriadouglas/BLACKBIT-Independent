@@ -1,6 +1,0 @@
-{
-  "title": "roboto",
-  "layout": "layouts/robotopage.njk",
-  "tags": ["roboto"],
-  "permalink": "{{ title | slug }}/episode{{ chapter }}/page{{ pagenumber }}/"
-}
