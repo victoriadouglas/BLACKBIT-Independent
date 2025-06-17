@@ -1,0 +1,30 @@
+---
+layout: layouts/base.njk
+title: Contact
+description:
+permalink: /contact/
+---
+
+{% include "components/header.njk" %}
+
+
+<div class="container">
+  <h2>I'm currently available for commercial freelance, nonprofit work at a reduced rate, or personal commissions on a sliding scale.</h2>
+  <h2>So reach out!</h2>
+  <div class="bordered paneled">
+<h2>Drop me a line!</h2>
+<form action="https://formspree.io/f/xnnvaqjg" method="POST">
+  <label>
+    Your email: <br>
+    <input type="email" name="email" style="width:90%;">
+  </label>
+  <label>
+    Your message: <br>
+    <textarea style="width:90%;"name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button class="button" type="submit">Send</button>
+</form>
+</div>
+<div style="height:120px;"></div>
+</div>

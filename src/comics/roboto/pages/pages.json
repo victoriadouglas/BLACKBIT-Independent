@@ -1,0 +1,9 @@
+{
+  "layout": "layouts/comicPage.njk",
+  "title": "Roboto",
+  "slugTitle": "roboto",
+  "tags": ["roboto"],
+  "titleimage": "/img/logo/robototitle.png",
+  "backgroundcolor": "f2f2f2",
+  "collectionKey": "collections.roboto"
+}

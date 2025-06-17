@@ -88,6 +88,20 @@
   }
 }
 
+.imagecard {
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
+  transition-duration: 200ms;
+  z-index: 20000;
+}
+
+.imagecard:hover {
+  transform: scale(130%) rotate(3deg);
+}
+
+
 /* -------------------- Comics Nav -------------------- */
 
 .comicnav {
@@ -624,6 +638,17 @@ position: relative;
 
 }
 
+.mobileLogo {
+  position: fixed;
+  z-index: 2000;
+  size: 70%;
+  img {
+    padding: 0;
+  }
+  @include breakpoint(tablet) { display: none; }
+  @include breakpoint(desktop) { left:55%; }
+}
+
 .logoStyling:hover {
   background-color: #00000000;
   color: white;
@@ -710,6 +735,7 @@ position: relative;
     white-space-collapse:preserve-spaces;
     font-size: 4rem;
     padding-top: 10px;
+    padding-bottom: 0;
   }
   
 }
@@ -751,15 +777,16 @@ position: relative;
 }
 
 /* -------------------- Home Page -------------------- */
-
+/*
 img:hover {
-  webkit-filter: blur(0px); /* Chrome, Safari, Opera */
+  webkit-filter: blur(0px); 
   filter: blur(0px);
   transition-duration: 200ms;
 }
 
 img:hover {
-  webkit-filter: blur(10px); /* Chrome, Safari, Opera */
+  webkit-filter: blur(10px); 
   filter: blur(10px);
   transition-duration: 200ms;
 }
+*/

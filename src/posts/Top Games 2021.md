@@ -1,5 +1,5 @@
 ---
-title: Top Video Games I played in 2021
+title: Favorite Videogames of 2021
 description: 
 date: 2022-01-06
 tags: life
