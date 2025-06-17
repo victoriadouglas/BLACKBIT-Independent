@@ -12,7 +12,7 @@
     @media (min-width: 1200px) { @content; }
   }
   @else if $point == tablet {
-    @media (min-width: 800px)  { @content; }
+    @media (min-width: 900px)  { @content; }
   }
 }
 
@@ -71,14 +71,17 @@ p {
 
 h1 {
   font-family: "Jersey15", sans-serif;
-  font-size: 12rem;
+  font-size: 8rem;
   color: white;
   -webkit-text-stroke-width: 1rem;
   -webkit-text-stroke-color: black;
   paint-order: stroke fill;
   filter: drop-shadow(0.8rem 0.8rem 0px #000000);
   margin-bottom: 10px;
-  line-height: 10rem;
+  margin-top: 100px;
+  line-height: 7rem;
+  @include breakpoint(tablet) { line-height: 8rem;font-size: 9rem; }
+  @include breakpoint(desktop) { line-height: 9rem;font-size: 10rem; }
   
 }
 
@@ -280,12 +283,6 @@ main {
 .datedisplay {
   padding: 0;
   margin: 0;
-}
-.imagecard {
-  border-radius: 5px;
-  -webkit-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
-  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
 }
 
 /* -------------------- Button Styling -------------------- */
