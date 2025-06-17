@@ -774,9 +774,9 @@ position: relative;
 /* -------------------- Home Page -------------------- */
 
 .home-offset {
-  padding-top: 50vh;
-  @include breakpoint(tablet) { padding-top: 70vh; }
-  @include breakpoint(desktop) { padding-top: 80vh; }
+  padding-top: 72vh;
+  @include breakpoint(tablet) { padding-top: 78vh; }
+  @include breakpoint(desktop) { padding-top: 82vh; }
 }
 
 /* -------------------- Home Page -------------------- */
